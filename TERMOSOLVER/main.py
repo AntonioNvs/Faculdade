@@ -1,3 +1,5 @@
+import os
+
 from random import choice
 from scraping import Scraping
 from factors import ControllFactors
@@ -9,7 +11,7 @@ attemps = 6
 page = Scraping()
 controller = ControllFactors()
 
-word_attempt = "ALUNO"
+word_attempt = "ROSEA"
 
 for i in range(attemps):
     page.writing(word_attempt)
@@ -20,5 +22,8 @@ for i in range(attemps):
         controller.add(factor)
     
     selected_words = controller.search_based_on_info(all_words)
+    
+    os.system("clear")
+    [print(word) for word in selected_words]
 
     word_attempt = choice(selected_words)
