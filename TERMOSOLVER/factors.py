@@ -8,12 +8,21 @@ class ControllFactors:
         if not self.factor_already_exists(factor):
             self.info.append(factor)
 
+        # Remove the problem of not have two or more of the same letter on the word
+        for fact1 in self.info:
+            for fact2 in self.info:
+                if isinstance(fact1, SameCaracterButAnotherPosition) and isinstance(fact2, DontHaveThatLetter):
+                    if fact1.c == fact2.c:
+                        self.info.remove(fact2)
+                if isinstance(fact1, SameCaracterOnSamePosition) and isinstance(fact2, DontHaveThatLetter):
+                    if fact1.c == fact2.c:
+                        self.info.remove(fact2)
 
     def search_based_on_info(self, words: List[str]) -> List[str]:
         selecteds = []
 
         for word in words:
-            if all(factor.search(word) for factor in self.info):
+            if all([factor.search(word) for factor in self.info]):
                 selecteds.append(word)
 
         return selecteds

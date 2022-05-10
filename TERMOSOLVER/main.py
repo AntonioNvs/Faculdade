@@ -1,5 +1,6 @@
 import os
 
+from time import sleep
 from random import choice
 from scraping import Scraping
 from factors import ControllFactors
@@ -14,7 +15,15 @@ controller = ControllFactors()
 word_attempt = "ROSEA"
 
 for i in range(attemps):
-    page.writing(word_attempt)
+    os.system("clear")
+    result = page.writing(word_attempt)
+
+    if result == "wne":
+        word_attempt = choice(selected_words)
+        i -= 1
+        continue
+    elif result == "f":
+        print(f"The show is over! The keyword was: {word_attempt}")
 
     factors = page.get_information_from_attempts()
 
@@ -23,7 +32,6 @@ for i in range(attemps):
     
     selected_words = controller.search_based_on_info(all_words)
     
-    os.system("clear")
-    [print(word) for word in selected_words]
+    [print(fact) for fact in controller.info]
 
     word_attempt = choice(selected_words)

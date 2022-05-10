@@ -57,14 +57,14 @@ class Scraping:
                 factors.append(SameCaracterButAnotherPosition(caracter, pos))
             elif "wrong" in info:
                 factors.append(DontHaveThatLetter(caracter))
-            elif "right done" in info:
+            elif "right" in info:
                 factors.append(SameCaracterOnSamePosition(caracter, pos))
         
         self.current_row += 1
 
         return factors
 
-    def writing(self, keyword: str) -> None:
+    def writing(self, keyword: str) -> str:
         # Find all empty letters to write a keyword, for beggining
 
         assert len(keyword) == 5, "The initial keyword it has to be size 5."
@@ -74,14 +74,28 @@ class Scraping:
 
         self.buttons["ENTER"].click()
 
-        sleep(4)
+        sleep(1)
+        notify = self.driver.find_element(By.TAG_NAME, "wc-notify")
+
+        if notify.text == "essa palavra não é aceita":
+            for i in range(5):
+                self.buttons[""].click()
+            sleep(1)
+            return "wne"
+        else:
+            sleep(3)
+            if notify.text != "":
+                return "f"
+            else:
+                return "c"
+
 
 if __name__ == "__main__":
     scrap = Scraping()
     
     sleep(1)
 
-    scrap.writing("ALUNO")
+    scrap.writing("BAFOS")
     scrap.get_information_from_attempts()
     
     sleep(3)
