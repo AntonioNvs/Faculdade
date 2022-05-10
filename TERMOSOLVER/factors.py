@@ -3,11 +3,16 @@ from typing import List
 class ControllFactors:
     def __init__(self) -> None:
         self.info = []
+        self.caracters = set()
+
+        self.know = False
 
     def add(self, factor) -> None:
         if not self.factor_already_exists(factor):
             self.info.append(factor)
+            self.caracters.add(factor.c)
 
+        n_pos = 0
         # Remove the problem of not have two or more of the same letter on the word
         for fact1 in self.info:
             for fact2 in self.info:
@@ -17,6 +22,12 @@ class ControllFactors:
                 if isinstance(fact1, SameCaracterOnSamePosition) and isinstance(fact2, DontHaveThatLetter):
                     if fact1.c == fact2.c:
                         self.info.remove(fact2)
+
+            if isinstance(fact1, SameCaracterOnSamePosition):
+                n_pos += 1
+        
+        if n_pos == 5:
+            self.know = True
 
     def search_based_on_info(self, words: List[str]) -> List[str]:
         selecteds = []

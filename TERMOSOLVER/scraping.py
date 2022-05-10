@@ -11,11 +11,16 @@ from bs4 import BeautifulSoup
 from factors import SameCaracterOnSamePosition, SameCaracterButAnotherPosition, DontHaveThatLetter
 
 class Scraping:
-    def __init__(self) -> None:
+    def __init__(self, n_boards: int) -> None:
         self.driver = webdriver.Firefox(executable_path="./drivers/geckodriver")
+
+        atexit.register(self.driver.quit)
+
         self.driver.maximize_window()
         
-        self.driver.get("https://term.ooo/")
+        route_param = "" if n_boards == 1 else str(n_boards)
+
+        self.driver.get(f"https://term.ooo/{route_param}")
 
         sleep(1)
 
@@ -23,9 +28,9 @@ class Scraping:
         
         self.__get_all_buttons()
 
-        atexit.register(self.driver.quit)
-
-        self.current_row = 0
+        self.boards = []
+        for i in range(n_boards):
+            self.boards.append(Board(self, i))
 
     def __get_all_buttons(self) -> None:
         buttons = self.driver.execute_script(
@@ -40,10 +45,51 @@ class Scraping:
             self.buttons[button.text] = button
 
 
+    def get_information(self) -> List[List]:
+        info = []
+        for board in self.boards:
+            info.append(board.get_information_from_attempts())
+
+        return info
+
+    def writing(self, keyword: str) -> str:
+        # Find all empty letters to write a keyword, for beggining
+
+        assert len(keyword) == 5, "The initial keyword it has to be size 5."
+
+        for c in keyword.upper():
+            self.buttons[c].click()
+
+        self.buttons["ENTER"].click()
+
+        sleep(1)
+        notify = self.driver.find_element(By.TAG_NAME, "wc-notify")
+
+        if notify.text == "essa palavra não é aceita":
+            for i in range(5):
+                self.buttons[""].click()
+            sleep(1)
+            return "wne"
+        else:
+            sleep(4)
+            
+            if len(notify.text) > 0:
+                return "f"
+            else:
+                return "c"
+
+
+class Board:
+    def __init__(self, scrap: Scraping, idx: int):
+        self.idx = idx
+        self.scrap = scrap
+        self.current_row = 0
+
+    
     def get_information_from_attempts(self) -> List[str]:
-        letters = self.driver.execute_script(
+        letters = self.scrap.driver.execute_script(
             f"""
-        return document.querySelector('wc-board').shadowRoot.querySelectorAll('wc-row')[{self.current_row}].shadowRoot.querySelectorAll('div')
+        return document.querySelectorAll('wc-board')[{self.idx}].shadowRoot.querySelectorAll('wc-row')[{self.current_row}].shadowRoot.querySelectorAll('div')
             """
         )
         
@@ -63,39 +109,12 @@ class Scraping:
         self.current_row += 1
 
         return factors
-
-    def writing(self, keyword: str) -> str:
-        # Find all empty letters to write a keyword, for beggining
-
-        assert len(keyword) == 5, "The initial keyword it has to be size 5."
-
-        for c in keyword:
-            self.buttons[c].click()
-
-        self.buttons["ENTER"].click()
-
-        sleep(1)
-        notify = self.driver.find_element(By.TAG_NAME, "wc-notify")
-
-        if notify.text == "essa palavra não é aceita":
-            for i in range(5):
-                self.buttons[""].click()
-            sleep(1)
-            return "wne"
-        else:
-            sleep(3)
-            if notify.text != "":
-                return "f"
-            else:
-                return "c"
-
-
 if __name__ == "__main__":
-    scrap = Scraping()
+    scrap = Scraping(1)
     
     sleep(1)
 
-    scrap.writing("BAFOS")
-    scrap.get_information_from_attempts()
+    scrap.writing("ROSEA")
+    print(scrap.get_information())
     
     sleep(3)
