@@ -11,8 +11,8 @@ from bs4 import BeautifulSoup
 from factors import SameCaracterOnSamePosition, SameCaracterButAnotherPosition, DontHaveThatLetter
 
 class Scraping:
-    def __init__(self, n_boards: int) -> None:
-        self.driver = webdriver.Firefox(executable_path="./drivers/geckodriver")
+    def __init__(self, driver, n_boards: int) -> None:
+        self.driver = driver
 
         atexit.register(self.driver.quit)
 

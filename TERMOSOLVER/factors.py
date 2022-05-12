@@ -5,6 +5,7 @@ class ControllFactors:
         self.info = []
         self.caracters = set()
 
+        self.n_letters_knowed = 0
         self.know = False
 
     def add(self, factor) -> None:
@@ -28,6 +29,8 @@ class ControllFactors:
         
         if n_pos == 5:
             self.know = True
+
+        self.n_letters_knowed = n_pos
 
     def search_based_on_info(self, words: List[str]) -> List[str]:
         selecteds = []
