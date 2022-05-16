@@ -52,27 +52,7 @@ class Window:
 
         return objects
 
-"""
 
-for(int i = 0; i < strlen(str); i+=3) {
-    int x;
-
-    if (str[i] == '0') {
-        x = str[i+1] - '0';
-
-    } else {
-        int fd = str[i] - '0';
-        int sd = str[i+1] - '0';
-
-        x = fd*10 + sd;
-    }
-
-    if(str[i+2] == 'C')
-        C[x]++;
-    else if ...
-}
-
-"""
     def main(self) -> None:
         window_is_open = True
         delay = 50
