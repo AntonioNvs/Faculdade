@@ -1,5 +1,6 @@
 import pygame
 import random
+import os
 
 from typing import List
 
@@ -203,7 +204,7 @@ class Object:
         """
             Draw the robot on the window.
         """
-        
+
         pygame.draw.rect(self.window, self.color, self.rect)
 
 
