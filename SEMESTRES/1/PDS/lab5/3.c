@@ -16,6 +16,7 @@ typedef struct InfoBrand {
 int main() {
   product products[8];
   info informations[8];
+
   int k = 0;
   float sum = 0.0;
 
@@ -33,10 +34,7 @@ int main() {
       informations[exists].qtd++;
       informations[exists].price += products[i].price;
     } else {
-      for(int j = 0; products[i].brand[j] != '\0'; j++)
-        informations[k].brand[j] = products[i].brand[j];
-
-      informations[k].brand[strlen(products[i].brand)] = '\0';
+      strcpy(produtcs[i].brand, informations[k].brand);
       informations[k].qtd = 1;
       informations[k].price = products[i].price;
 
