@@ -1,11 +1,15 @@
 import random
 import pygame
+import math
+
+from copy import deepcopy
 
 class Environment:
     # This constants needed to be negatives
     INIT_PIXEL = -2
     FINAL_PIXEL = -3
     OBSTACLE_PIXEL = -4
+    PATH_PIXEL = -5
 
     def __init__(self, m: int, n: int) -> None:
         self.m = m
@@ -52,7 +56,8 @@ class Environment:
         colors = {
             self.INIT_PIXEL: (255, 10, 10),
             self.FINAL_PIXEL: (50, 200, 50),
-            self.OBSTACLE_PIXEL: (34, 65, 254)
+            self.OBSTACLE_PIXEL: (34, 65, 254),
+            self.PATH_PIXEL: (230, 230, 0)
         }
 
         for i in range(self.m):
@@ -79,6 +84,7 @@ class Environment:
         self.create_random_obstacles(n_ob)
 
         self.update_wavefront()
+        self.define_way()
 
         window_is_open = True
 
@@ -100,8 +106,6 @@ class Environment:
 
             options = [(i-1, j), (i, j-1), (i+1, j), (i, j+1)]
 
-            if i == j:
-                options.append((i-1, j-1))
 
             for nx, ny in options:
                 if nx >= 0 and ny >= 0 and nx < self.m and ny < self.n and self.pixels[nx][ny] == -1:
@@ -109,9 +113,52 @@ class Environment:
                     queue.append((nx, ny, v+1))
 
             self.drawing_the_screen()
-            pygame.time.delay(70)
+            pygame.time.delay(5)
+
+
+    def define_way(self) -> None:
+        x, y = self.inital_pos
+
+        queue = []
+
+        queue.append((x, y, []))
+        
+        self.pixels[x][y] = math.inf
+
+        self.visiteds = [[0 for i in range(self.n)] for j in range(self.m)]
+
+        self.visiteds[x][y] = 1
+        define_path = []
+
+        while queue:
+            i, j, path = queue.pop(0)
+
+            if i == self.final_pos[0] and j == self.final_pos[1]:
+                define_path = path
+                define_path.pop()
+                break
+
+            path = deepcopy(path)
+
+            options = [(i-1, j), (i, j-1), (i+1, j), (i, j+1)]
+
+            for nx, ny in options:
+                if nx >= 0 and ny >= 0 and nx < self.m and ny < self.n and self.pixels[nx][ny] < self.pixels[i][j] and self.visiteds[nx][ny] == 0:
+                    self.visiteds[nx][ny] = 1
+                    queue.append((nx, ny, path + [(nx, ny)]))
+
+        self.pixels[x][y] = self.INIT_PIXEL
+
+        if not define_path:
+            print("Doesn't exist a path for this configuration")
+
+        for x, y in define_path:
+            self.pixels[x][y] = self.PATH_PIXEL
+            self.drawing_the_screen()
+            pygame.time.delay(50)
+
 
 if __name__ == "__main__":
     # Works just on square enviroments
     env = Environment(30, 30)
-    env.main(120)
+    env.main(280)
