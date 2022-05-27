@@ -15,14 +15,14 @@ class Environment:
         self.m = m
         self.n = n
 
-        self.width = 960
-        self.height = 960
+        self.width = 1200
+        self.height = 1200
 
         pygame.init()
 
         self.pixels = [[-1 for i in range(self.m)] for j in range(self.n)]
 
-        self.font = pygame.font.SysFont('Arial', 12)
+        self.font = pygame.font.SysFont('Arial', 10)
         self.window = pygame.display.set_mode((self.width, self.height))
         
         pygame.display.set_caption("Wave Front Planner Simulation")
@@ -83,6 +83,8 @@ class Environment:
     def main(self, n_ob) -> None:        
         self.create_random_obstacles(n_ob)
 
+        pygame.time.delay(10000)
+
         self.update_wavefront()
         self.define_way()
 
@@ -113,7 +115,7 @@ class Environment:
                     queue.append((nx, ny, v+1))
 
             self.drawing_the_screen()
-            pygame.time.delay(5)
+            pygame.time.delay(2)
 
 
     def define_way(self) -> None:
@@ -155,10 +157,10 @@ class Environment:
         for x, y in define_path:
             self.pixels[x][y] = self.PATH_PIXEL
             self.drawing_the_screen()
-            pygame.time.delay(50)
+            pygame.time.delay(80)
 
 
 if __name__ == "__main__":
     # Works just on square enviroments
-    env = Environment(30, 30)
-    env.main(280)
+    env = Environment(50, 50)
+    env.main(450)
