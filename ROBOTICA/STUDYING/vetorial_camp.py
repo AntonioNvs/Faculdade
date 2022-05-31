@@ -2,6 +2,8 @@ import pygame
 import random
 import math
 
+import numpy as np
+
 class Environment:
   def __init__(self, fps: int) -> None:
     self.fps = fps
@@ -27,54 +29,39 @@ class Environment:
   def execute(self) -> None:
     window_is_open = True
 
-    # Pixels per second
-    velocity = 200
-
     while window_is_open:
       for event in pygame.event.get():
         if event.type == pygame.QUIT:
           window_is_open = False
 
-      x_steps = random.randint(-self.width/2, self.width/2)
-      y_steps = random.randint(-self.width/2, self.height/2)
+      if pygame.mouse.get_pressed()[0]:
+        goal = np.array(pygame.mouse.get_pos())
 
-      # Euclidian distance
-      distance = math.sqrt(x_steps**2 + y_steps**2)
+        while np.linalg.norm(goal-self.robot.pos) > 2:
+          fatt = 0.05*(goal - self.robot.pos)
 
-      frames = int((distance/velocity) * self.fps)
+          self.robot.move(fatt)
 
-      if self.robot.x + x_steps < 2*self.robot.radius: continue
-      if self.robot.y + y_steps < 2*self.robot.radius: continue
-      if self.robot.x + x_steps > self.width - 2*self.robot.radius: continue
-      if self.robot.y + y_steps > self.height - 2*self.robot.radius: continue
+          self.draw_the_window()
+          pygame.time.delay(int(1000 / self.fps))
 
-      for step in range(frames):
-        self.robot.move(x_steps/frames, y_steps/frames, self.width, self.height)
 
-        self.draw_the_window()
-
-        pygame.time.delay(int((distance*1000) / (velocity*frames)))
-
-      pygame.time.delay(500)
-
+      self.draw_the_window()
 
 class Robot:
   def __init__(self, radius: float, x_pos: int = 0, y_pos: int = 0) -> None:
     self.radius = radius
-    self.x = x_pos
-    self.y = y_pos
+    self.pos = np.array([x_pos, y_pos])
 
     self.color = (30, 200, 30)
 
 
   def draw(self, window: pygame.Surface):
-    pygame.draw.circle(window, self.color, (self.x, self.y), self.radius)
+    pygame.draw.circle(window, self.color, (self.pos[0], self.pos[1]), self.radius)
     
 
-  def move(self, x_steps: int, y_steps: int, max_width: int, max_height: int):
-    self.x += x_steps
-    self.y += y_steps
-  
+  def move(self, vec: np.ndarray):
+    self.pos = np.add(self.pos, vec)
 
 if __name__ == "__main__":
-  Environment(30).execute()
+  Environment(60).execute()
