@@ -24,7 +24,6 @@ int main() {
 
         printf("%d\n", s);
     }
-
-    system("pause");
+    
     return 0;
 }

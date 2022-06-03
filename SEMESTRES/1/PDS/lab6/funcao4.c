@@ -10,7 +10,6 @@ int main() {
     while(scanf("%d", &y) != EOF) {
         printf("%d\n", bissexto(y));
     }
-
-    system("pause");
+    
     return 0;
 }

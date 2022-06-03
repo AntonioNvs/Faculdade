@@ -28,7 +28,7 @@ class Environment:
     window_is_open = True
 
     # Pixels per second
-    velocity = 200
+    velocity = 500
 
     while window_is_open:
       for event in pygame.event.get():
@@ -55,7 +55,7 @@ class Environment:
 
         pygame.time.delay(int((distance*1000) / (velocity*frames)))
 
-      pygame.time.delay(500)
+      pygame.time.delay(100)
 
 
 class Robot:
@@ -77,4 +77,4 @@ class Robot:
   
 
 if __name__ == "__main__":
-  Environment(30).execute()
+  Environment(300).execute()
