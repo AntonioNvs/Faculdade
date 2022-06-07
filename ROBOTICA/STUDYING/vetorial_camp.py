@@ -1,13 +1,10 @@
 import pygame
 import random
 import math
-
 import numpy as np
 
 class Environment:
-  def __init__(self, fps: int) -> None:
-    self.fps = fps
-
+  def __init__(self) -> None:
     self.width = 1200
     self.height = 800
 
@@ -37,20 +34,23 @@ class Environment:
 
     x, y = self.robot.pos
 
+    fatt *= 3
+    frep *= 3
+
     pygame.draw.line(self.window, (10, 10, 255), (x,y), (x+fatt[0],y+fatt[1]), width=2)
     pygame.draw.line(self.window, (255, 10, 10), (x,y), (x+frep[0],y+frep[1]), width=2)
 
     pygame.display.update()
 
 
-  def normalize_force(self, force):
+  def normalize_force(self, f):
     limit = 10
 
-    modl = np.linalg.norm(force)
+    modl = np.linalg.norm(f)
     if modl > limit:
-      force *= (limit/modl)
+      f *= (limit/modl)
 
-    return force
+    return f
 
 
   def execute(self) -> None:
@@ -70,7 +70,7 @@ class Environment:
           # Calculte the repulsion force
           frep = np.array([0.0, 0.0])
           y = 2
-          min_distance = 160
+          min_distance = 60
           krep = 5*10e4
 
           for obstacule in self.obstacules:
@@ -83,11 +83,10 @@ class Environment:
             dist = np.linalg.norm(dot_robot - dot_obs)
             frep += (krep / (dist**2)) *((1/dist - 1/min_distance)**(y-1)) * ((dot_robot-dot_obs)/dist)
 
-          
-          frep = self.normalize_force(frep)
-          fatt = self.normalize_force(fatt)
+          frep_norm = self.normalize_force(frep)
+          fatt_norm = self.normalize_force(fatt)
 
-          force = self.normalize_force(frep + fatt)
+          force = self.normalize_force(frep_norm + fatt_norm)
           
           self.robot.move(force)
 
@@ -157,4 +156,4 @@ class Obstacule:
 
 
 if __name__ == "__main__":
-  Environment(40).execute()
+  Environment().execute()
