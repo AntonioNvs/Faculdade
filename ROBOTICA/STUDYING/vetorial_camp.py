@@ -34,6 +34,7 @@ class Environment:
 
     x, y = self.robot.pos
 
+    # Increasing strength for viewing reasons
     fatt *= 3
     frep *= 3
 
@@ -62,9 +63,12 @@ class Environment:
           window_is_open = False
 
       if pygame.mouse.get_pressed()[0]:
+        # Get the mouse position for define the goal
         goal = np.array(pygame.mouse.get_pos())
 
+        # Until the distance is more than one pixel, the robot will move
         while np.linalg.norm(goal-self.robot.pos) > 1.0:
+          # Calculate the attraction force.
           fatt = 0.5*(goal - self.robot.pos)
 
           # Calculte the repulsion force
@@ -77,17 +81,21 @@ class Environment:
             dot_obs = obstacule.dot_more_close(self.robot)
             dot_robot = self.robot.dot_more_close(obstacule)
 
+            # If the distance from the obstacule is less than the minimum, the obstacule will be ignored.
             if obstacule.minimum_distance_from_the_robot(self.robot) > min_distance:
               continue
-
+            
+            # Calculating the derivation of the repulsion potential
             dist = np.linalg.norm(dot_robot - dot_obs)
             frep += (krep / (dist**2)) *((1/dist - 1/min_distance)**(y-1)) * ((dot_robot-dot_obs)/dist)
 
+          # Normalize the forces
           frep_norm = self.normalize_force(frep)
           fatt_norm = self.normalize_force(fatt)
 
           force = self.normalize_force(frep_norm + fatt_norm)
           
+          # Make the robot move
           self.robot.move(force)
 
           self.draw_the_window(fatt, frep)
@@ -111,6 +119,10 @@ class Robot:
   
 
   def dot_more_close(self, obstacule) -> float:
+    """
+      With trigonometry, define the close dot from the obstacule.
+    """
+
     hip = np.linalg.norm(self.pos-obstacule.pos)
 
     costeta = (self.pos[0] - obstacule.pos[0]) / hip
@@ -143,6 +155,10 @@ class Obstacule:
     return distance - self.radius - robot.radius
 
   def dot_more_close(self, robot: Robot) -> float:
+    """
+      With trigonometry, define the close dot from the robot.
+    """
+
     hip = np.linalg.norm(self.pos-robot.pos)
 
     costeta = (self.pos[0] - robot.pos[0]) / hip
