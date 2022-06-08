@@ -10,4 +10,4 @@
 
 ### Campos potenciais
 * O terceiro projeto é uma simulação do modelo de navegação por campos potenciais, no qual o *goal* é retratado como uma força de atração para o robô e os obstáculos como força repulsiva, conseguindo, assim, a partir da construção e somatório dessas forças, definir o movimento ordenado do robô. Logo, o programa feito tem o robô como o círculo verde e os obstáculos como os círculos laranja. A definição do *goal* é dada pelo clique do mouse na tela, entretanto, por distorções na captura da tela, o *goal* e o ponteiro do mouse não ficaram no mesmo ponto.
-* <a href="https://ibb.co/JqhNH9r"><img src="https://i.ibb.co/pQmgdS4/Vetorial-Camp-Simulator-2022-06-08-09-55-30.gif" alt="Vetorial-Camp-Simulator-2022-06-08-09-55-30" border="0" /></a>
+* ![img](https://i.ibb.co/pQmgdS4/Vetorial-Camp-Simulator-2022-06-08-09-55-30.gif)
