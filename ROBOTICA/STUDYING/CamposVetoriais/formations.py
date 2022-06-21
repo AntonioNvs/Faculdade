@@ -63,6 +63,9 @@ class Environment:
     for robot in self.robots:
       dist += np.linalg.norm(self.center_robot.get_vertice_goal(self.robots, robot, self.square_size) - robot.pos)
 
+    dist += np.linalg.norm(self.center_robot.pos - goal)
+    print(dist)
+
     return dist
 
 
@@ -79,13 +82,13 @@ class Environment:
         goal = np.array(pygame.mouse.get_pos())
 
         # Until the distance is more than one pixel, the robot will move
-        while self.sum_of_distance_of_all_robots(goal) > 2*math.sqrt(2)*self.square_size:
+        while self.sum_of_distance_of_all_robots(goal) >= 5:
           for robot in self.robots + [self.center_robot]:
             if robot == self.center_robot:
-                katt = 0.5
+                katt = 0.3
                 robot_goal = goal
             else:
-                katt = 2
+                katt = 0.5
                 robot_goal = self.center_robot.get_vertice_goal(self.robots, robot, self.square_size)
 
             # Calculate the attraction force.
@@ -95,7 +98,7 @@ class Environment:
             frep = np.array([0.0, 0.0])
             y = 2
             min_distance = 25
-            krep = 5*10e4
+            krep = 4*10e4
 
             for obstacule in self.obstacules + self.robots + [self.center_robot]:
               if obstacule == robot:
