@@ -39,6 +39,22 @@
    - fputs()
     - Escrevendo no arquivo um vetor de char dado como parâmetro.
 
+   - fread()
+    - Recebe o ponteiro onde a leitura será arquivada, o tamanho em bytes
+      do tipo guardado, a sua quantidade e onde será lido.
+    - Usado para tipos binários de arquivo.
+    - Retorna a quantidade de item lidos.
+
+    Exemplo: fread(&value, sizeof(int), 1, file);
+
+   fwrite()
+    - A mesma estrutura que o fread(), a diferença é que irá escrever a 
+      variável dada como primeiro parâmetro no arquivo
+    - Usado para tipos binários de arquivo.
+    - Retorna a quantidade de item escritos.
+
+    Exemplo: fwrite(&value, sizeof(int), 1, file);
+
   NOTA: SEMPRE LEMBRE DE FECHAR O ARQUIVO COM FCLOSE DEPOIS DE SEU USO
 */
 
