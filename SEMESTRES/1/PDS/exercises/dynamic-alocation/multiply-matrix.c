@@ -31,14 +31,16 @@ int ** multiply_matrix(int **m1, int **m2, int N) {
     }
 
     int **result;
-    result = (int **) malloc(N*sizeof(int *));
+    result = (int **) calloc(N, sizeof(int *));
 
     for(int i = 0; i < N; i++) {
-        result[i] = (int *) malloc(N*sizeof(int));
+        result[i] = (int *) calloc(N, sizeof(int));
         for(int j = 0; j < N; j++)
             for(int k = 0; k < N; k++)
-                result[i][j] += m1[i][k] + m2[k][j];
+                result[i][j] += m1[i][k] * m2[k][j];
     }
+
+    return result;
 }
 
 void print_matrix(int **matrix, int N) {

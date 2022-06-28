@@ -1,6 +1,6 @@
-import pygame
-import random
 import math
+import pygame
+import itertools
 import numpy as np
 
 class Environment:
@@ -14,16 +14,7 @@ class Environment:
 
     pygame.display.set_caption("Vetorial Camp Simulator")
 
-    self.robot_radius = 10
-
-    self.center_robot = Robot(self.robot_radius, 70, 70, visible=False)
-
-    self.robots = [
-      Robot(self.robot_radius, 20, 20),
-      Robot(self.robot_radius, 20, 120),
-      Robot(self.robot_radius, 120, 20),
-      Robot(self.robot_radius, 120, 120)
-    ]
+    self.f = Formation("circle", (120, 120), 10)
 
     # Create obstacules
     self.obstacules = [
@@ -33,8 +24,6 @@ class Environment:
       Obstacule(90, 300, 400),
     ]
 
-    self.square_size = 90
-
   
   def draw_the_window(self) -> None:
     self.window.fill((0, 0, 0))
@@ -42,7 +31,7 @@ class Environment:
     for obstacule in self.obstacules:
       obstacule.draw(self.window)
 
-    for robot in self.robots + [self.center_robot]:
+    for robot in self.f.robots + [self.f.center_robot]:
       robot.draw(self.window)
 
     pygame.display.update()
@@ -60,10 +49,10 @@ class Environment:
 
   def sum_of_distance_of_all_robots(self, goal) -> int:
     dist = 0
-    for robot in self.robots:
-      dist += np.linalg.norm(self.center_robot.get_vertice_goal(self.robots, robot, self.square_size) - robot.pos)
+    for robot in self.f.robots:
+      dist += np.linalg.norm(self.f.get_robot_goal(robot) - robot.pos)
 
-    dist += np.linalg.norm(self.center_robot.pos - goal)
+    dist += np.linalg.norm(self.f.center_robot.pos - goal)
     print(dist)
 
     return dist
@@ -83,13 +72,13 @@ class Environment:
 
         # Until the distance is more than one pixel, the robot will move
         while self.sum_of_distance_of_all_robots(goal) >= 5:
-          for robot in self.robots + [self.center_robot]:
-            if robot == self.center_robot:
+          for robot in self.f.robots + [self.f.center_robot]:
+            if robot == self.f.center_robot:
                 katt = 0.3
                 robot_goal = goal
             else:
                 katt = 0.5
-                robot_goal = self.center_robot.get_vertice_goal(self.robots, robot, self.square_size)
+                robot_goal = self.f.get_robot_goal(robot)
 
             # Calculate the attraction force.
             fatt = katt*(robot_goal - robot.pos)
@@ -100,7 +89,7 @@ class Environment:
             min_distance = 25
             krep = 4*10e4
 
-            for obstacule in self.obstacules + self.robots + [self.center_robot]:
+            for obstacule in self.obstacules + self.f.robots + [self.f.center_robot]:
               if obstacule == robot:
                 continue
 
@@ -125,11 +114,126 @@ class Environment:
             robot.move(force)
 
           self.draw_the_window()
-          pygame.time.delay(50)
+          pygame.time.delay(20)
 
       pygame.time.delay(100)
 
       self.draw_the_window()
+
+
+class Formation:
+  info = {
+    "square": {
+      "n_robots": 4,
+      "side": 70
+    },
+    "circle": {
+      "n_robots": 5,
+      "side": 90
+    }
+  }
+
+  def __init__(self, formation: str, center: tuple, robot_radius: int) -> None:
+    self.formation = formation
+    self.robot_radius = robot_radius
+
+    assert self.robot_radius < 40, "The robot radius must to be less than fourty."
+
+    self.center_robot = Robot(self.robot_radius, center[0], center[1], visible=False)
+
+    x = center[0]
+    y = center[1]
+    self.side = self.info[self.formation]["side"]
+
+    if formation == "square":
+      side = (self.side/2) + 2*self.robot_radius
+      
+      self.robots = [
+        Robot(self.robot_radius, x-side, y-side),
+        Robot(self.robot_radius, x-side, y+side),
+        Robot(self.robot_radius, x+side, y-side),
+        Robot(self.robot_radius, x+side, y+side)
+      ]
+    
+    if formation == "circle":
+      ratio = self.side - 2*self.robot_radius
+      
+      self.robots = [
+        Robot(self.robot_radius, x + ratio*math.cos(math.radians(90)), y + ratio*math.cos(math.radians(180))),
+        Robot(self.robot_radius, x + ratio*math.cos(math.radians(162)), y + ratio*math.cos(math.radians(252))),
+        Robot(self.robot_radius, x + ratio*math.cos(math.radians(252)), y + ratio*math.cos(math.radians(324))),
+        Robot(self.robot_radius, x + ratio*math.cos(math.radians(324)), y + ratio*math.cos(math.radians(36))),
+        Robot(self.robot_radius, x + ratio*math.cos(math.radians(36)), y + ratio*math.cos(math.radians(108)))
+      ]
+
+
+  def _get_the_coords_of_each_vertice(self):
+    x, y = self.center_robot.pos
+
+    if self.formation == "circle":
+      ratio = self.side - 2*self.robot_radius
+
+      coords = [
+        (x + ratio*math.cos(math.radians(90)), y + ratio*math.cos(math.radians(180))),
+        (x + ratio*math.cos(math.radians(162)), y + ratio*math.cos(math.radians(252))),
+        (x + ratio*math.cos(math.radians(234)), y + ratio*math.cos(math.radians(324))),
+        (x + ratio*math.cos(math.radians(306)), y + ratio*math.cos(math.radians(36))),
+        (x + ratio*math.cos(math.radians(18)), y + ratio*math.cos(math.radians(108)))
+      ]
+
+    if self.formation == "square":
+      size = (self.side/2) + 2*self.robot_radius
+
+      coords = (
+          (x-size, y-size),
+          (x-size, y+size),
+          (x+size, y-size),
+          (x+size, y+size)
+      )
+
+    return coords
+
+
+  def _get_distance_of_all_robots_to_your_vertices(self, combination):
+    """
+      Auxiliar function of '_get_the_best_combination', which is reponsable to
+      calculate the distance of each robot to your respective vertice.
+    """
+
+    coords = self._get_the_coords_of_each_vertice()
+
+    dist = 0
+    for i, robot in enumerate(self.robots):
+      dist += np.linalg.norm(robot.pos - coords[combination[i]])
+
+    return dist
+      
+  def _get_the_best_combination(self) -> list:
+    """
+      Return the best combination of each robot for your vertice, 
+      in other words, the minimum distance to each target
+    """
+
+    minimum_combination = [math.inf, []]
+
+    permutations = list(itertools.permutations(list(range(0, self.info[self.formation]["n_robots"]))))
+
+    for combination in permutations:
+      dist = self._get_distance_of_all_robots_to_your_vertices(combination)
+      if minimum_combination[0] > dist:
+        minimum_combination[0] = dist
+        minimum_combination[1] = combination
+
+    return minimum_combination[1]
+
+
+  def get_robot_goal(self, robot) -> np.ndarray:
+    coords = self._get_the_coords_of_each_vertice()
+    idx = self.robots.index(robot)
+    combination = self._get_the_best_combination()
+    
+    return coords[combination.index(idx)]
+    
 
 
 class Robot:
@@ -143,28 +247,9 @@ class Robot:
 
   def draw(self, window: pygame.Surface):
     if not self.visible:
-        self.color = (255, 255, 0)
+      return
 
     pygame.draw.circle(window, self.color, (self.pos[0], self.pos[1]), self.radius)
-  
-
-  def get_vertice_goal(self, robots, robot, side: int) -> np.ndarray:
-      assert not self.visible and len(robots) == 4
-
-      idx = robots.index(robot)
-
-      x, y = self.pos
-      
-      size = side / 2
-
-      coords = (
-          (x-size, y-size),
-          (x-size, y+size),
-          (x+size, y-size),
-          (x+size, y+size)
-      )
-
-      return np.array(coords[idx])
 
 
   def minimum_distance_from_the_robot(self, robot) -> float:

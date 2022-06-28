@@ -105,5 +105,10 @@ int main() {
       }
     }
 
+    // Liberando memória!
+    for(int i = 0; i < m; i++)
+      free(M[i]);
+    free(M);
+
     return 0;
 }
