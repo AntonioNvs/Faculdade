@@ -14,7 +14,7 @@ class Environment:
 
     pygame.display.set_caption("Vetorial Camp Simulator")
 
-    self.f = Formation("circle", (120, 120), 10)
+    self.f = Formation("square", (120, 120), 10)
 
     # Create obstacules
     self.obstacules = [
@@ -89,7 +89,7 @@ class Environment:
             min_distance = 25
             krep = 4*10e4
 
-            for obstacule in self.obstacules + self.f.robots + [self.f.center_robot]:
+            for obstacule in self.obstacules + self.f.robots:
               if obstacule == robot:
                 continue
 
