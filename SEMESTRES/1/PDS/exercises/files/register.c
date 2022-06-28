@@ -10,15 +10,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX 100
-
-void write(int v[], int N) {
-    FILE *file = fopen("register.txt", "w");
-
-    for(int i = 0; i < N; i++)
-        fprintf(file, "%d ", v+i);
-    fprintf(file, "\n");
-}
+#define MAX 10
 
 int ** read() {
     FILE *file = fopen("register.txt", "r");
@@ -27,25 +19,38 @@ int ** read() {
 
     int count = 1;
     int idx = 0;
+    vectors[0] = (int *) malloc(sizeof(int));
+    vectors[count] = (int *) malloc(sizeof(int)*MAX);
 
-    vectors[1] = (int *) malloc(sizeof(int)*10);
-
-    while(!feof(file)) {
-        
-        fscanf(file, "%d", &vectors[count][idx]);
+    while(fscanf(file, "%d", &vectors[count][idx]) != EOF) {
         idx++;
 
-        if(idx == 10) {
+        if(idx == MAX) {
             idx = 0;
             count++;
-            vectors[count] = (int *) malloc(sizeof(int)*10);
+            vectors[count] = (int *) malloc(sizeof(int)*MAX);
         }
     }
-    vectors[0][0] = count;
+    vectors[0][0] = count-1;
 
-    vectors = (int **) realloc(vectors, count);
+    fclose(file);
 
     return vectors;
+}
+
+void write(int v[]) {
+    int **vectors = read();
+
+    FILE *file = fopen("register.txt", "a");
+
+
+    if(vectors[0][0] != 0)
+        fprintf(file, "\n");
+
+    for(int i = 0; i < MAX; i++)
+        fprintf(file, "%d ", *(v+i));
+
+    fclose(file);
 }
 
 int main() {
@@ -53,20 +58,23 @@ int main() {
     scanf("%d", &T);
 
     while(T--) {
-        char action[100];
+        char action[10];
         scanf("%s", action);
 
         if(!strcmp(action, "Ler")) {
             int **vectors = read();
             int N = vectors[0][0];
-
-            for(int i = 1; i < N; i++) {
-                for(int j = 0; j < 10; j++)
+            
+            for(int i = 1; i <= N; i++) {
+                for(int j = 0; j < MAX; j++)
                     printf("%d ", vectors[i][j]);
                 printf("\n");
             }
         } else if(!strcmp(action, "Escrever")) {
-            
+            int *v = (int *) malloc(sizeof(int)*MAX);
+            for(int i = 0; i < MAX; i++)
+                scanf("%d", &v[i]);
+            write(v);
         }
     }
 }
