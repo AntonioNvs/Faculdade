@@ -3,6 +3,14 @@
   "files.associations": {
     "stdio.h": "c",
     "string.h": "c",
-    "*.tcc": "cpp"
+    "*.tcc": "cpp",
+    "iostream": "cpp",
+    "array": "cpp",
+    "bitset": "cpp",
+    "initializer_list": "cpp",
+    "regex": "cpp",
+    "utility": "cpp",
+    "valarray": "cpp",
+    "ostream": "cpp"
   }
 }
