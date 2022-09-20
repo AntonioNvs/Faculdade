@@ -1,9 +1,12 @@
+#include <time.h>
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 
-#define N 8
+#define N 180
 #define ll long long int
+#define min(a,b) ((a) < (b) ? (a) : (b))
+
 
 // Definindo estrutura de tipos chaves
 typedef struct Mov {
@@ -87,6 +90,14 @@ int get_conectivity_degree(int x, int y) {
     return count;
 }
 
+void swap_on_sort(int i, int j, int comparation[8][2]) {
+    int value1 = comparation[i][0], value2 = comparation[i][1];
+    comparation[i][0] = comparation[j][0];
+    comparation[i][1] = comparation[j][1];
+    comparation[j][0] = value1;
+    comparation[j][1] = value2;
+}
+
 // A partir da heurística dos graus de conectividade de cada movimento, retorna
 // uma lista ordenada dos movimentos com o menor grau descrito.
 HeuristicReturn heuristic(int x, int y) {
@@ -109,11 +120,20 @@ HeuristicReturn heuristic(int x, int y) {
     for(int i = 0; i < qtd; i++)
         for(int j = i+1; j < qtd; j++)
             if(comparation[j][0] < comparation[i][0]) {
-                int value1 = comparation[i][0], value2 = comparation[i][1];
-                comparation[i][0] = comparation[j][0];
-                comparation[i][1] = comparation[j][1];
-                comparation[j][0] = value1;
-                comparation[j][1] = value2;
+                swap_on_sort(i, j, comparation);
+            } else if(comparation[j][0] == comparation[i][0]) {
+                double dist1 = sqrt(
+                    pow(min(x + addition[comparation[i][1]].x, N - x + addition[comparation[i][1]].x), 2) + 
+                    pow(min(y + addition[comparation[i][1]].y, N - y + addition[comparation[i][1]].y), 2)
+                );
+
+                double dist2 = sqrt(
+                    pow(min(x + addition[comparation[j][1]].x, N - x + addition[comparation[j][1]].x), 2) + 
+                    pow(min(y + addition[comparation[j][1]].y, N - y + addition[comparation[j][1]].y), 2)
+                );
+
+                if(dist2 < dist1)
+                    swap_on_sort(i, j, comparation);
             }
 
     // Criando o vetor de movimentos com as adições desejadas
