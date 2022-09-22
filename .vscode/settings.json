@@ -12,6 +12,8 @@
     "utility": "cpp",
     "valarray": "cpp",
     "ostream": "cpp",
-    "random": "c"
+    "random": "c",
+    "typeindex": "cpp",
+    "typeinfo": "cpp"
   }
 }
