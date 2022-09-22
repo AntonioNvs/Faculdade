@@ -12,6 +12,14 @@
     "utility": "cpp",
     "valarray": "cpp",
     "ostream": "cpp",
-    "random": "c"
+    "random": "c",
+    "deque": "cpp",
+    "forward_list": "cpp",
+    "list": "cpp",
+    "string": "cpp",
+    "unordered_map": "cpp",
+    "unordered_set": "cpp",
+    "vector": "cpp",
+    "string_view": "cpp"
   }
 }
