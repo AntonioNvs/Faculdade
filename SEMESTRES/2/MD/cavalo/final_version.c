@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define N 180
+#define N 200
 #define ll long long int
 #define min(a,b) ((a) < (b) ? (a) : (b))
 
