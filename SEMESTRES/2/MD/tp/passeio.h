@@ -1,9 +1,11 @@
-#include <time.h>
-#include <math.h>
+#ifndef PASSEIO_TP
+#define PASSEIO_TP
+
 #include <stdio.h>
+#include <math.h>
 #include <stdlib.h>
 
-#define N 8
+#define N 250
 #define ll long long int
 #define min(a,b) ((a) < (b) ? (a) : (b))
 
@@ -19,72 +21,17 @@ typedef struct Heuristic {
     int qtd;
 } HeuristicReturn;
 
-// Variáveis globais
-ll homes = 0;
-ll setbacks = 0;
-int grid[N+1][N+1];
-Moviment addition[8] = {{-1, 2}, {1, 2}, {2, 1}, {2, -1}, {1, -2}, {-1, -2}, {-2, -1}, {-2, 1}};
-
-// Declarando as funções antes do uso na main
-int limits(int x, int y);
-int get_conectivity_degree(int x, int y);
-HeuristicReturn heuristic(int x, int y);
-int backtracking(int x, int y, int count);
-void reset_grid();
-void print_grid();
-
-int main() {
-    srand(time(NULL));
-
-    // Solução da posição (1, 1)
-    // Zerando todo o grid para não haver problemas
-    reset_grid();
-    
-    int initial_x = 1, initial_y = 1;
-    grid[initial_x][initial_y] = 1;
-
-    backtracking(initial_x, initial_y, 2);
-
-    printf("Começando na posição (1, 1)\n\n");
-    print_grid();
-    printf("\n");
-    printf("Número de casas visitadas: %lld\n", homes);
-    printf("Número de retrocedimentos: %lld\n", setbacks);
-    
-    // Solução de uma posição aleatória diferente de 1
-    printf("\n--------------------------------------------\n\n");
-    reset_grid();
-    homes = 0;
-    setbacks = 0;
-
-    do {
-        initial_x = rand() % N + 1;
-        initial_y = rand() % N + 1;
-    } while(initial_x == 1 && initial_y == 1);
-
-    grid[initial_x][initial_y] = 1;
-    backtracking(initial_x, initial_y, 2);
-
-    printf("Começando na posição (%d, %d)\n\n", initial_x, initial_y);
-    print_grid();
-    printf("\n");
-    printf("Número de casas visitadas: %lld\n", homes);
-    printf("Número de retrocedimentos: %lld\n", setbacks);
-    
-    return 0;
-}
-
 // Verificando se a posição de análise se encaixa nos limites e requisitos exigidos
-int limits(int x, int y) {
+int limits(int x, int y, int grid[N+1][N+1]) {
     return x >= 1 && x <= N && y >= 1 && y <= N && grid[x][y] == 0;
 }
 
 // Retorna o número de movimentos possíveis que a posição atual pode fazer
-int get_conectivity_degree(int x, int y) {
+int get_conectivity_degree(int x, int y, int grid[N+1][N+1], Moviment addition[8]) {
     int count = 0;
 
     for(int i = 0; i < 8; i++)
-        if(limits(x + addition[i].x, y + addition[i].y))
+        if(limits(x + addition[i].x, y + addition[i].y, grid))
             count++;
 
     return count;
@@ -100,7 +47,7 @@ void swap_on_sort(int i, int j, int comparation[8][2]) {
 
 // A partir da heurística dos graus de conectividade de cada movimento, retorna
 // uma lista ordenada dos movimentos com o menor grau descrito.
-HeuristicReturn heuristic(int x, int y) {
+HeuristicReturn heuristic(int x, int y, int grid[N+1][N+1], Moviment addition[8]) {
     int qtd = 0;
     int comparation[8][2];
     
@@ -109,8 +56,8 @@ HeuristicReturn heuristic(int x, int y) {
         int nx = x + addition[i].x;
         int ny = y + addition[i].y;
 
-        if(limits(nx, ny)) {
-            comparation[qtd][0] = get_conectivity_degree(nx, ny);
+        if(limits(nx, ny, grid)) {
+            comparation[qtd][0] = get_conectivity_degree(nx, ny, grid, addition);
             comparation[qtd][1] = i;
             qtd++;
         }
@@ -150,13 +97,13 @@ HeuristicReturn heuristic(int x, int y) {
 
 // Função de backtracking, que utiliza da heurística para prever os movimentos
 // a serem analisados
-int backtracking(int x, int y, int count) {
-    homes++;
+int backtracking(int x, int y, int count, int grid[N+1][N+1], Moviment addition[8], ll *homes, ll *setbacks) {
+    *homes = *homes + 1;
 
     int k = 0;
     int finish = count > N*N;
 
-    HeuristicReturn result = heuristic(x, y);
+    HeuristicReturn result = heuristic(x, y, grid, addition);
 
     while(k < result.qtd && !finish) {
 
@@ -165,12 +112,12 @@ int backtracking(int x, int y, int count) {
 
         grid[nx][ny] = count;
 
-        finish = backtracking(nx, ny, count + 1);
+        finish = backtracking(nx, ny, count + 1, grid, addition, homes, setbacks);
         
         // Caso não tenha finalizado nesse caso, é atualizado a 
         // variável de retrocedimentos e tenta em uma nova casa
         if(!finish) {
-            setbacks++;
+            *setbacks = *setbacks + 1;
             grid[nx][ny] = 0;
         }
     }
@@ -179,21 +126,45 @@ int backtracking(int x, int y, int count) {
 }
 
 // Reseta todas as casas do grid para 0
-void reset_grid() {
+void reset_grid(int grid[N+1][N+1]) {
     for(int i = 0; i <= N; i++)
         for(int j = 0; j <= N; j++)
             grid[i][j] = 0;
 }
 
 // Printa, de forma espaçada, todas as casas do grid
-void print_grid() {
+void print_on_file(int grid[N+1][N+1], ll *homes, ll *setbacks) {
+    FILE * src = fopen("saida.txt", "a");
     for(int i = 1; i <= N; i++) {
         for(int j = 1; j <= N; j++) {
             if(grid[i][j] >= 10)
-                printf("%d ", grid[i][j]);
+                fprintf(src, "%d ", grid[i][j]);
             else
-                printf(" %d ", grid[i][j]);
+                fprintf(src, " %d ", grid[i][j]);
         }
-        printf("\n");
+        fprintf(src, "\n");
     }
+    fprintf(src, "%lld %lld\n", *homes, *setbacks);
+    fclose(src);
 }
+
+void passeio(int x, int y) {
+
+    // Variáveis globais
+    ll homes = 0;
+    ll setbacks = 0;
+    int grid[N+1][N+1];
+    Moviment addition[8] = {{-1, 2}, {1, 2}, {2, 1}, {2, -1}, {1, -2}, {-1, -2}, {-2, -1}, {-2, 1}};
+
+    // Solução da posição (1, 1)
+    // Zerando todo o grid para não haver problemas
+    reset_grid(grid);
+    
+    grid[x][y] = 1;
+
+    backtracking(x, y, 2, grid, addition, &homes, &setbacks);
+    
+    print_on_file(grid, &homes, &setbacks);
+}
+
+#endif

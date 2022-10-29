@@ -57,8 +57,8 @@ int backtracking(int x, int y, int count) {
     int crr_mov = 0;
     int finish = count > N*N;
 
-    if(count > 62)
-        printf("%d\n", count);
+    if(count > 64)
+        return 1;
 
     HeuristicReturn result = heuristic(x, y);
     Moviment * moviments = result.movs;
@@ -90,7 +90,7 @@ int backtracking(int x, int y, int count) {
 // Heuristíca para seleção de uma lista ordenada dos melhores possíveis movimentos
 HeuristicReturn heuristic(int x, int y) {
     // Lista de acréscimos da posição atual que o cavalo pode realizar em um tabuleiro
-    Moviment addition[8] = {{-1, 2}, {1, 2}, {2, 1}, {2, -1}, {1, -2}, {-1, -2}, {-2, -1}, {-2, 1}};
+    Moviment addition[8] = {{-1, 2}, {-2, 1}, {-2, -1}, {-1, -2}, {1, -2}, {2, -1}, {2, 1}, {1, 2}};
 
     int qtd_mov = 0;
 
