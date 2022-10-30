@@ -5,7 +5,7 @@
 #include <math.h>
 #include <stdlib.h>
 
-#define N 250
+#define N 8
 #define ll long long int
 #define min(a,b) ((a) < (b) ? (a) : (b))
 
@@ -121,6 +121,8 @@ int backtracking(int x, int y, int count, int grid[N+1][N+1], Moviment addition[
             grid[nx][ny] = 0;
         }
     }
+    
+    free(result.movs);
 
     return finish;
 }
@@ -156,7 +158,6 @@ void passeio(int x, int y) {
     int grid[N+1][N+1];
     Moviment addition[8] = {{-1, 2}, {1, 2}, {2, 1}, {2, -1}, {1, -2}, {-1, -2}, {-2, -1}, {-2, 1}};
 
-    // Solução da posição (1, 1)
     // Zerando todo o grid para não haver problemas
     reset_grid(grid);
     
