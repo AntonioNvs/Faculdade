@@ -50,7 +50,7 @@ void swap_on_sort(int i, int j, int comparation[8][2]) {
 HeuristicReturn heuristic(int x, int y, int grid[N+1][N+1], Moviment addition[8]) {
     int qtd = 0;
     int comparation[8][2];
-    
+
     // Obtendo todos os movimentos possíveis junto com seus graus de conectividade
     for(int i = 0; i < 8; i++) {
         int nx = x + addition[i].x;
@@ -58,14 +58,14 @@ HeuristicReturn heuristic(int x, int y, int grid[N+1][N+1], Moviment addition[8]
 
         if(limits(nx, ny, grid)) {
             comparation[qtd][0] = get_conectivity_degree(nx, ny, grid, addition);
-            comparation[qtd][1] = i;
-            qtd++;
+            comparation[qtd++][1] = i;
         }
     }
 
     // Ordenando a matriz de comparação pelos graus de conectividade
     for(int i = 0; i < qtd; i++)
         for(int j = i+1; j < qtd; j++)
+            // Primeiro critério é o grau de conectividade do movimento
             if(comparation[j][0] < comparation[i][0]) {
                 swap_on_sort(i, j, comparation);
             } else if(comparation[j][0] == comparation[i][0]) {
@@ -79,9 +79,10 @@ HeuristicReturn heuristic(int x, int y, int grid[N+1][N+1], Moviment addition[8]
                     pow(min(y + addition[comparation[j][1]].y, N - y + addition[comparation[j][1]].y), 2)
                 );
 
-                if(dist2 < dist1)
+                if(dist2 <= dist1)
                     swap_on_sort(i, j, comparation);
             }
+
 
     // Criando o vetor de movimentos com as adições desejadas
     Moviment * moviments = (Moviment *) malloc(qtd * sizeof(Moviment));
@@ -120,6 +121,8 @@ int backtracking(int x, int y, int count, int grid[N+1][N+1], Moviment addition[
             *setbacks = *setbacks + 1;
             grid[nx][ny] = 0;
         }
+
+        k++;
     }
     
     free(result.movs);
@@ -151,12 +154,11 @@ void print_on_file(int grid[N+1][N+1], ll *homes, ll *setbacks) {
 }
 
 void passeio(int x, int y) {
-
     // Variáveis globais
     ll homes = 0;
     ll setbacks = 0;
     int grid[N+1][N+1];
-    Moviment addition[8] = {{-1, 2}, {1, 2}, {2, 1}, {2, -1}, {1, -2}, {-1, -2}, {-2, -1}, {-2, 1}};
+    Moviment addition[8] = {{-1, 2}, {-2, 1}, {-2, -1}, {-1, -2}, {1, -2}, {2, -1}, {2, 1}, {1, 2}};
 
     // Zerando todo o grid para não haver problemas
     reset_grid(grid);

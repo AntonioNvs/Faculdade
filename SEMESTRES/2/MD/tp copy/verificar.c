@@ -4,7 +4,7 @@
 
 #include "passeio.h"
 
-#define N_TESTE 4
+#define N_TESTE 1000
 
 void validar_movimento(int resul[3], int atual[2], int proximo[2]) {
 
@@ -209,8 +209,8 @@ int main() {
     time_t t;
     srand((unsigned) time (&t));
 
-    posicao_inicial_original[0][0] = 1;
-    posicao_inicial_original[0][1] = 1;
+    posicao_inicial_original[0][0] = 4;
+    posicao_inicial_original[0][1] = 7;
 
     for (int i = 1; i < N_TESTE; i++){
 

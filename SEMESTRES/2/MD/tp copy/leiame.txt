@@ -1,0 +1,9 @@
+Memory 7,6 GiB
+Processor Intel® Core™ i7-8565U CPU @ 1.80GHz × 8 
+Graphics NV118 / Mesa Intel® UHD Graphics 620 (WHL GT2)
+Disk Capacity 512,1 GiB
+
+OS Name Ubuntu 20.04.5 LTS
+OS Type 64-bit
+
+Compiler: gcc 9+ version

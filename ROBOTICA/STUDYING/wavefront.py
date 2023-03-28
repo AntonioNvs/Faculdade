@@ -15,8 +15,8 @@ class Environment:
         self.m = m
         self.n = n
 
-        self.width = 1200
-        self.height = 1200
+        self.width = 800
+        self.height = 800
 
         pygame.init()
 
@@ -162,5 +162,5 @@ class Environment:
 
 if __name__ == "__main__":
     # Works just on square enviroments
-    env = Environment(50, 50)
-    env.main(450)
+    env = Environment(30, 30)
+    env.main(200)

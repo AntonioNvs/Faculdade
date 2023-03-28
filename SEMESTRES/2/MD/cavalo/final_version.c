@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define N 8
+#define N 150
 #define ll long long int
 #define min(a,b) ((a) < (b) ? (a) : (b))
 
@@ -173,6 +173,8 @@ int backtracking(int x, int y, int count) {
             setbacks++;
             grid[nx][ny] = 0;
         }
+
+        k++;
     }
 
     return finish;
