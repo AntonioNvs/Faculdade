@@ -7,8 +7,8 @@ typedef long long ll;
 class Factorial : public Operation {
   public:
     Factorial();
-    virtual ll iterative(ll N);
-    virtual ll recursion(ll N);
+    virtual OperationReturn iterative(ll N);
+    virtual OperationReturn recursion(ll N);
 };
 
 #endif
