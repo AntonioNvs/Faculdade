@@ -17,13 +17,16 @@ INC = include
 BIN = bin
 OBJS = $(OBJ)/main.o $(OBJ)/factorial.o $(OBJ)/fibonacci.o $(OBJ)/operation.o
 HDRS = $(INC)/factorial.hpp $(INC)/fibonacci.hpp $(INC)/operation.hpp 
-CFLAGS = -Wall -c -pg -ftest-coverage -I$(INC)
+CFLAGS = -Wall -c -pg -ftest-coverage -I $(INC)
 
 EXE = $(BIN)/main
 
 all: run
 run:     	$(EXE)
-	$(EXE) fibonacci 42
+	$(EXE) fibonacci 45
+	gprof $(EXE) gmon.out | more > fibonacci.txt
+	$(EXE) factorial 40
+	gprof $(EXE) gmon.out | more > fibonacci.txt
 
 $(BIN)/main: $(OBJS)
 	$(CC) -pg -o $(BIN)/main $(OBJS) $(LIBS)

@@ -6,29 +6,15 @@
 Operation::Operation() {};
 
 // Return the system time execution in seconds
-float Operation::get_sys_time_exec(rusage end, rusage start) {
-    if(end.ru_stime.tv_usec < start.ru_stime.tv_usec) {
-        end.ru_stime.tv_usec = 10e6 + end.ru_stime.tv_usec - start.ru_stime.tv_usec;
-        end.ru_stime.tv_sec =  end.ru_stime.tv_sec - start.ru_stime.tv_sec;
-    }
+double Operation::get_sys_time_exec(rusage end, rusage start) {
     return (end.ru_stime.tv_sec - start.ru_stime.tv_sec) + (end.ru_stime.tv_usec - start.ru_stime.tv_usec) / 10e6;
 }
 
 // Return the user time execution in seconds
-float Operation::get_user_time_exec(rusage end, rusage start) {
-    if(end.ru_utime.tv_usec < start.ru_utime.tv_usec) {
-        end.ru_utime.tv_usec = 10e6 + end.ru_utime.tv_usec - start.ru_utime.tv_usec;
-        end.ru_utime.tv_sec = end.ru_utime.tv_sec - start.ru_utime.tv_sec;
-    }
-
+double Operation::get_user_time_exec(rusage end, rusage start) {
     return (end.ru_utime.tv_sec - start.ru_utime.tv_sec) + (end.ru_utime.tv_usec - start.ru_utime.tv_usec) / 10e6;
 }
 
-float Operation::get_clock_time_exec(timespec end, timespec start) {
-    if(end.tv_nsec < start.tv_nsec) {
-        end.tv_nsec = 10e9 + end.tv_nsec - start.tv_nsec;
-        end.tv_sec = end.tv_sec - start.tv_sec;
-    }
-
+double Operation::get_clock_time_exec(timespec end, timespec start) {
     return (end.tv_sec - start.tv_sec) + (end.tv_nsec - start.tv_nsec) / 10e9;
 }
