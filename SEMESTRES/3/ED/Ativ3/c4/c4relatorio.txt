@@ -1,0 +1,51 @@
+De início, foi visto que as linhas da matriz não eram desalocadas. Corrigido esse erro, com o valgrind foi percebido que o
+free(text) era inadequado, erro corrigido.
+
+Script started on 2023-04-04 18:43:19-03:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="160" LINES="18"]
+(base) ]0;antonio@antonio-Lenovo-IdeaPad-S145-15IWL: ~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[01;32mantonio@antonio-Lenovo-IdeaPad-S145-15IWL[00m:[01;34m~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[00m$ gcc -g c4/c4r[Kcorreto.c
+(base) ]0;antonio@antonio-Lenovo-IdeaPad-S145-15IWL: ~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[01;32mantonio@antonio-Lenovo-IdeaPad-S145-15IWL[00m:[01;34m~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[00m$ gcc -g c4/c4correto.cexit[Kvalgrind --leak-check=full ./a.out
+==45709== Memcheck, a memory error detector
+==45709== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==45709== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==45709== Command: ./a.out
+==45709== 
+==45709== Conditional jump or move depends on uninitialised value(s)
+==45709==    at 0x483C9F5: free (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==45709==    by 0x109209: main (c4correto.c:21)
+==45709== 
+==45709== Invalid free() / delete / delete[] / realloc()
+==45709==    at 0x483CA3F: free (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==45709==    by 0x109209: main (c4correto.c:21)
+==45709==  Address 0x109080 is in the Text segment of /home/antonio/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3/a.out
+==45709==    at 0x109080: _start (in /home/antonio/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3/a.out)
+==45709== 
+==45709== 
+==45709== HEAP SUMMARY:
+==45709==     in use at exit: 0 bytes in 0 blocks
+==45709==   total heap usage: 6 allocs, 7 frees, 112 bytes allocated
+==45709== 
+==45709== All heap blocks were freed -- no leaks are possible
+==45709== 
+==45709== Use --track-origins=yes to see where uninitialised values come from
+==45709== For lists of detected and suppressed errors, rerun with: -s
+==45709== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+(base) ]0;antonio@antonio-Lenovo-IdeaPad-S145-15IWL: ~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[01;32mantonio@antonio-Lenovo-IdeaPad-S145-15IWL[00m:[01;34m~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[00m$ valgrind --leak-check=full ./a.out[13Pgcc -g c4/c4correto.c
+(base) ]0;antonio@antonio-Lenovo-IdeaPad-S145-15IWL: ~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[01;32mantonio@antonio-Lenovo-IdeaPad-S145-15IWL[00m:[01;34m~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[00m$ gcc -g c4/c4correto.cvalgrind --leak-check=full ./a.out
+==45857== Memcheck, a memory error detector
+==45857== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==45857== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==45857== Command: ./a.out
+==45857== 
+==45857== 
+==45857== HEAP SUMMARY:
+==45857==     in use at exit: 0 bytes in 0 blocks
+==45857==   total heap usage: 6 allocs, 6 frees, 112 bytes allocated
+==45857== 
+==45857== All heap blocks were freed -- no leaks are possible
+==45857== 
+==45857== For lists of detected and suppressed errors, rerun with: -s
+==45857== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+(base) ]0;antonio@antonio-Lenovo-IdeaPad-S145-15IWL: ~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[01;32mantonio@antonio-Lenovo-IdeaPad-S145-15IWL[00m:[01;34m~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[00m$ exit
+exit
+
+Script done on 2023-04-04 18:46:39-03:00 [COMMAND_EXIT_CODE="0"]

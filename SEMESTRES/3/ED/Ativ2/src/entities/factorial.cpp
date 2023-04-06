@@ -1,10 +1,18 @@
 #include <sys/time.h>
 #include <sys/resource.h>
+#include <cmath>
 
 #include "factorial.hpp"
 
 typedef long long ll;
 
+double calc_sin(double x, int n) {
+  double sen = 0;
+  for (int i = 0; i < n; i++) {
+      sen += pow(-1, i) * pow(x, 2 * i + 1) / tgamma(2 * i + 2);
+  }
+  return sen;
+}
 
 Factorial::Factorial() {}
 
@@ -40,6 +48,7 @@ OperationReturn Factorial::recursion(ll N) {
   clock_gettime(CLOCK_MONOTONIC, &start_clock);
 
   ll response = execution_factorial(N);
+  // calc_sin(2, (int)10e6);
 
   getrusage(RUSAGE_SELF, &end);
   clock_gettime(CLOCK_MONOTONIC, &end_clock);

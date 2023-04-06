@@ -1,0 +1,50 @@
+Primeiro, foi visto a tentativa de escrita a uma memória inválida, erro corrigido. Após a execução do valgrind, foi notado
+que o vetor x não é desalocado da memória, logo, free adicionado no final da função f.
+
+Script started on 2023-04-04 18:59:09-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="160" LINES="19"]
+(base) ]0;antonio@antonio-Lenovo-IdeaPad-S145-15IWL: ~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[01;32mantonio@antonio-Lenovo-IdeaPad-S145-15IWL[00m:[01;34m~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[00m$ gcc -h[Kg c9/c9correto.c
+(base) ]0;antonio@antonio-Lenovo-IdeaPad-S145-15IWL: ~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[01;32mantonio@antonio-Lenovo-IdeaPad-S145-15IWL[00m:[01;34m~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[00m$ gcc -g c9/c9correto.cexit[Kvalgrind --leak-check=full ./a.out
+==47390== Memcheck, a memory error detector
+==47390== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==47390== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==47390== Command: ./a.out
+==47390== 
+==47390== 
+==47390== HEAP SUMMARY:
+==47390==     in use at exit: 40 bytes in 1 blocks
+==47390==   total heap usage: 1 allocs, 0 frees, 40 bytes allocated
+==47390== 
+==47390== 40 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==47390==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==47390==    by 0x10915E: f (c9correto.c:4)
+==47390==    by 0x109180: main (c9correto.c:10)
+==47390== 
+==47390== LEAK SUMMARY:
+==47390==    definitely lost: 40 bytes in 1 blocks
+==47390==    indirectly lost: 0 bytes in 0 blocks
+==47390==      possibly lost: 0 bytes in 0 blocks
+==47390==    still reachable: 0 bytes in 0 blocks
+==47390==         suppressed: 0 bytes in 0 blocks
+==47390== 
+==47390== For lists of detected and suppressed errors, rerun with: -s
+==47390== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+(base) ]0;antonio@antonio-Lenovo-IdeaPad-S145-15IWL: ~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[01;32mantonio@antonio-Lenovo-IdeaPad-S145-15IWL[00m:[01;34m~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[00m$ valgrind --leak-check=full ./a.out[13Pgcc -g c9/c9correto.c
+(base) ]0;antonio@antonio-Lenovo-IdeaPad-S145-15IWL: ~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[01;32mantonio@antonio-Lenovo-IdeaPad-S145-15IWL[00m:[01;34m~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[00m$ gcc -g c9/c9correto.cvalgrind --leak-check=full ./a.out
+==47450== Memcheck, a memory error detector
+==47450== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==47450== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==47450== Command: ./a.out
+==47450== 
+==47450== 
+==47450== HEAP SUMMARY:
+==47450==     in use at exit: 0 bytes in 0 blocks
+==47450==   total heap usage: 1 allocs, 1 frees, 40 bytes allocated
+==47450== 
+==47450== All heap blocks were freed -- no leaks are possible
+==47450== 
+==47450== For lists of detected and suppressed errors, rerun with: -s
+==47450== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+(base) ]0;antonio@antonio-Lenovo-IdeaPad-S145-15IWL: ~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[01;32mantonio@antonio-Lenovo-IdeaPad-S145-15IWL[00m:[01;34m~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[00m$ exit
+exit
+
+Script done on 2023-04-04 18:59:37-03:00 [COMMAND_EXIT_CODE="0"]

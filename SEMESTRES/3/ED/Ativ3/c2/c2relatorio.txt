@@ -1,0 +1,25 @@
+O erro identificado pela análise do código foi a falta da inclusão da biblioteca stdio.h e tentar realizar
+a impressão de uma posição não definida previamente, sendo impresso lixo.
+
+Script started on 2023-04-04 18:38:04-03:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="160" LINES="18"]
+(base) ]0;antonio@antonio-Lenovo-IdeaPad-S145-15IWL: ~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[01;32mantonio@antonio-Lenovo-IdeaPad-S145-15IWL[00m:[01;34m~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[00m$ gcc -c c2/c2corretoc[K.c
+(base) ]0;antonio@antonio-Lenovo-IdeaPad-S145-15IWL: ~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[01;32mantonio@antonio-Lenovo-IdeaPad-S145-15IWL[00m:[01;34m~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[00m$ gcc -c c2/c2correto.cexit[Kgcc -g c2/c2.c./a.outexit[Kvalgrind --leak-check=full ./a.outgcc -g c1.c[Kvalgrind --leak-check=full ./a.out[Kt
+==45067== Memcheck, a memory error detector
+==45067== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==45067== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==45067== Command: ./a.out
+==45067== 
+0 1 2 3 4 5 6 7 8 9 
+==45067== 
+==45067== HEAP SUMMARY:
+==45067==     in use at exit: 0 bytes in 0 blocks
+==45067==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==45067== 
+==45067== All heap blocks were freed -- no leaks are possible
+==45067== 
+==45067== For lists of detected and suppressed errors, rerun with: -s
+==45067== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+(base) ]0;antonio@antonio-Lenovo-IdeaPad-S145-15IWL: ~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[01;32mantonio@antonio-Lenovo-IdeaPad-S145-15IWL[00m:[01;34m~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[00m$ exit
+exit
+
+Script done on 2023-04-04 18:38:25-03:00 [COMMAND_EXIT_CODE="0"]

@@ -23,10 +23,10 @@ EXE = $(BIN)/main
 
 all: run
 run:     	$(EXE)
-	$(EXE) fibonacci 45
+	$(EXE) fibonacci 5
 	gprof $(EXE) gmon.out | more > fibonacci.txt
-	$(EXE) factorial 40
-	gprof $(EXE) gmon.out | more > fibonacci.txt
+	$(EXE) factorial 5
+	gprof $(EXE) gmon.out | more > factorial.txt
 
 $(BIN)/main: $(OBJS)
 	$(CC) -pg -o $(BIN)/main $(OBJS) $(LIBS)

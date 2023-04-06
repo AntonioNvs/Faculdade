@@ -9,20 +9,20 @@ Each sample counts as 0.01 seconds.
   0.00      0.00     0.00        2     0.00     0.00  Operation::get_user_time_exec(rusage, rusage)
   0.00      0.00     0.00        2     0.00     0.00  Operation::get_clock_time_exec(timespec, timespec)
   0.00      0.00     0.00        2     0.00     0.00  Operation::Operation()
+  0.00      0.00     0.00        2     0.00     0.00  bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
   0.00      0.00     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z8calc_sendi
   0.00      0.00     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z8calc_sindi
   0.00      0.00     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN9OperationC2Ev
   0.00      0.00     0.00        1     0.00     0.00  _GLOBAL__sub_I_main
-  0.00      0.00     0.00        1     0.00     0.00  execution_fibonacci(long long)
+  0.00      0.00     0.00        1     0.00     0.00  execution_factorial(long long)
   0.00      0.00     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
   0.00      0.00     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
   0.00      0.00     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
   0.00      0.00     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      0.00     0.00        1     0.00     0.00  Factorial::iterative(long long)
+  0.00      0.00     0.00        1     0.00     0.00  Factorial::recursion(long long)
   0.00      0.00     0.00        1     0.00     0.00  Factorial::Factorial()
-  0.00      0.00     0.00        1     0.00     0.00  Fibonacci::iterative(long long)
-  0.00      0.00     0.00        1     0.00     0.00  Fibonacci::recursion(long long)
   0.00      0.00     0.00        1     0.00     0.00  Fibonacci::Fibonacci()
-  0.00      0.00     0.00        1     0.00     0.00  bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
 
  %         the percentage of the total running time of the
 time       program used by this function.
@@ -63,78 +63,78 @@ notice and this notice are preserved.
 granularity: each sample hit covers 2 byte(s) no time propagated
 
 index % time    self  children    called     name
-                0.00    0.00       1/2           Fibonacci::iterative(long long) [22]
-                0.00    0.00       1/2           Fibonacci::recursion(long long) [23]
+                0.00    0.00       1/2           Factorial::iterative(long long) [22]
+                0.00    0.00       1/2           Factorial::recursion(long long) [23]
 [8]      0.0    0.00    0.00       2         Operation::get_sys_time_exec(rusage, rusage) [8]
 -----------------------------------------------
-                0.00    0.00       1/2           Fibonacci::iterative(long long) [22]
-                0.00    0.00       1/2           Fibonacci::recursion(long long) [23]
+                0.00    0.00       1/2           Factorial::iterative(long long) [22]
+                0.00    0.00       1/2           Factorial::recursion(long long) [23]
 [9]      0.0    0.00    0.00       2         Operation::get_user_time_exec(rusage, rusage) [9]
 -----------------------------------------------
-                0.00    0.00       1/2           Fibonacci::iterative(long long) [22]
-                0.00    0.00       1/2           Fibonacci::recursion(long long) [23]
+                0.00    0.00       1/2           Factorial::iterative(long long) [22]
+                0.00    0.00       1/2           Factorial::recursion(long long) [23]
 [10]     0.0    0.00    0.00       2         Operation::get_clock_time_exec(timespec, timespec) [10]
 -----------------------------------------------
-                0.00    0.00       1/2           Factorial::Factorial() [21]
-                0.00    0.00       1/2           Fibonacci::Fibonacci() [24]
+                0.00    0.00       1/2           Factorial::Factorial() [24]
+                0.00    0.00       1/2           Fibonacci::Fibonacci() [25]
 [11]     0.0    0.00    0.00       2         Operation::Operation() [11]
 -----------------------------------------------
-                0.00    0.00       1/1           __libc_csu_init [34]
-[12]     0.0    0.00    0.00       1         _GLOBAL__sub_I__Z8calc_sendi [12]
-                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [19]
+                0.00    0.00       2/2           main [6]
+[12]     0.0    0.00    0.00       2         bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [12]
 -----------------------------------------------
                 0.00    0.00       1/1           __libc_csu_init [34]
-[13]     0.0    0.00    0.00       1         _GLOBAL__sub_I__Z8calc_sindi [13]
-                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [18]
------------------------------------------------
-                0.00    0.00       1/1           __libc_csu_init [34]
-[14]     0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN9OperationC2Ev [14]
+[13]     0.0    0.00    0.00       1         _GLOBAL__sub_I__Z8calc_sendi [13]
                 0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [20]
 -----------------------------------------------
                 0.00    0.00       1/1           __libc_csu_init [34]
-[15]     0.0    0.00    0.00       1         _GLOBAL__sub_I_main [15]
-                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [17]
+[14]     0.0    0.00    0.00       1         _GLOBAL__sub_I__Z8calc_sindi [14]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [19]
 -----------------------------------------------
-                                   8             execution_fibonacci(long long) [16]
-                0.00    0.00       1/1           Fibonacci::recursion(long long) [23]
-[16]     0.0    0.00    0.00       1+8       execution_fibonacci(long long) [16]
-                                   8             execution_fibonacci(long long) [16]
+                0.00    0.00       1/1           __libc_csu_init [34]
+[15]     0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN9OperationC2Ev [15]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [21]
 -----------------------------------------------
-                0.00    0.00       1/1           _GLOBAL__sub_I_main [15]
-[17]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [17]
+                0.00    0.00       1/1           __libc_csu_init [34]
+[16]     0.0    0.00    0.00       1         _GLOBAL__sub_I_main [16]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [18]
 -----------------------------------------------
-                0.00    0.00       1/1           _GLOBAL__sub_I__Z8calc_sindi [13]
+                                   4             execution_factorial(long long) [17]
+                0.00    0.00       1/1           Factorial::recursion(long long) [23]
+[17]     0.0    0.00    0.00       1+4       execution_factorial(long long) [17]
+                                   4             execution_factorial(long long) [17]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I_main [16]
 [18]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [18]
 -----------------------------------------------
-                0.00    0.00       1/1           _GLOBAL__sub_I__Z8calc_sendi [12]
+                0.00    0.00       1/1           _GLOBAL__sub_I__Z8calc_sindi [14]
 [19]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [19]
 -----------------------------------------------
-                0.00    0.00       1/1           _GLOBAL__sub_I__ZN9OperationC2Ev [14]
+                0.00    0.00       1/1           _GLOBAL__sub_I__Z8calc_sendi [13]
 [20]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [20]
 -----------------------------------------------
-                0.00    0.00       1/1           main [6]
-[21]     0.0    0.00    0.00       1         Factorial::Factorial() [21]
-                0.00    0.00       1/2           Operation::Operation() [11]
+                0.00    0.00       1/1           _GLOBAL__sub_I__ZN9OperationC2Ev [15]
+[21]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [21]
 -----------------------------------------------
                 0.00    0.00       1/1           main [6]
-[22]     0.0    0.00    0.00       1         Fibonacci::iterative(long long) [22]
+[22]     0.0    0.00    0.00       1         Factorial::iterative(long long) [22]
                 0.00    0.00       1/2           Operation::get_user_time_exec(rusage, rusage) [9]
                 0.00    0.00       1/2           Operation::get_sys_time_exec(rusage, rusage) [8]
                 0.00    0.00       1/2           Operation::get_clock_time_exec(timespec, timespec) [10]
 -----------------------------------------------
                 0.00    0.00       1/1           main [6]
-[23]     0.0    0.00    0.00       1         Fibonacci::recursion(long long) [23]
-                0.00    0.00       1/1           execution_fibonacci(long long) [16]
+[23]     0.0    0.00    0.00       1         Factorial::recursion(long long) [23]
+                0.00    0.00       1/1           execution_factorial(long long) [17]
                 0.00    0.00       1/2           Operation::get_user_time_exec(rusage, rusage) [9]
                 0.00    0.00       1/2           Operation::get_sys_time_exec(rusage, rusage) [8]
                 0.00    0.00       1/2           Operation::get_clock_time_exec(timespec, timespec) [10]
 -----------------------------------------------
                 0.00    0.00       1/1           main [6]
-[24]     0.0    0.00    0.00       1         Fibonacci::Fibonacci() [24]
+[24]     0.0    0.00    0.00       1         Factorial::Factorial() [24]
                 0.00    0.00       1/2           Operation::Operation() [11]
 -----------------------------------------------
                 0.00    0.00       1/1           main [6]
-[25]     0.0    0.00    0.00       1         bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [25]
+[25]     0.0    0.00    0.00       1         Fibonacci::Fibonacci() [25]
+                0.00    0.00       1/2           Operation::Operation() [11]
 -----------------------------------------------
 
  This table describes the call tree of the program, and was sorted by
@@ -227,9 +227,9 @@ notice and this notice are preserved.
 
 Index by function name
 
-  [12] _GLOBAL__sub_I__Z8calc_sendi [18] __static_initialization_and_destruction_0(int, int) [24] Fibonacci::Fibonacci()
-  [13] _GLOBAL__sub_I__Z8calc_sindi [19] __static_initialization_and_destruction_0(int, int) [8] Operation::get_sys_time_exec(rusage, rusage)
-  [14] _GLOBAL__sub_I__ZN9OperationC2Ev [20] __static_initialization_and_destruction_0(int, int) [9] Operation::get_user_time_exec(rusage, rusage)
-  [15] _GLOBAL__sub_I_main    [21] Factorial::Factorial() [10] Operation::get_clock_time_exec(timespec, timespec)
-  [16] execution_fibonacci(long long) [22] Fibonacci::iterative(long long) [11] Operation::Operation()
-  [17] __static_initialization_and_destruction_0(int, int) [23] Fibonacci::recursion(long long) [25] bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  [13] _GLOBAL__sub_I__Z8calc_sendi [19] __static_initialization_and_destruction_0(int, int) [25] Fibonacci::Fibonacci()
+  [14] _GLOBAL__sub_I__Z8calc_sindi [20] __static_initialization_and_destruction_0(int, int) [8] Operation::get_sys_time_exec(rusage, rusage)
+  [15] _GLOBAL__sub_I__ZN9OperationC2Ev [21] __static_initialization_and_destruction_0(int, int) [9] Operation::get_user_time_exec(rusage, rusage)
+  [16] _GLOBAL__sub_I_main    [22] Factorial::iterative(long long) [10] Operation::get_clock_time_exec(timespec, timespec)
+  [17] execution_factorial(long long) [23] Factorial::recursion(long long) [11] Operation::Operation()
+  [18] __static_initialization_and_destruction_0(int, int) [24] Factorial::Factorial() [12] bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)

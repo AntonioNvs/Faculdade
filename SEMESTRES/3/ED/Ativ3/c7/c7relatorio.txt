@@ -1,0 +1,24 @@
+Foi observado a tentativa de escrever o '\0' em uma posição inválida no vetor. Dado isso, foi acrescentado mais uma casa,
+ao invés de 26 foi para 27, para adequar a necessidade, gerando nenhum erro explícito pelo valgrind.
+
+Script started on 2023-04-04 18:55:19-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="160" LINES="26"]
+(base) ]0;antonio@antonio-Lenovo-IdeaPad-S145-15IWL: ~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[01;32mantonio@antonio-Lenovo-IdeaPad-S145-15IWL[00m:[01;34m~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[00m$ gcc -g c7/c7correto.c
+(base) ]0;antonio@antonio-Lenovo-IdeaPad-S145-15IWL: ~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[01;32mantonio@antonio-Lenovo-IdeaPad-S145-15IWL[00m:[01;34m~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[00m$ gcc -g c7/c7correto.cexit[Kvalgrind --leak-check=full ./a.out
+==46867== Memcheck, a memory error detector
+==46867== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==46867== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==46867== Command: ./a.out
+==46867== 
+==46867== 
+==46867== HEAP SUMMARY:
+==46867==     in use at exit: 0 bytes in 0 blocks
+==46867==   total heap usage: 1 allocs, 1 frees, 27 bytes allocated
+==46867== 
+==46867== All heap blocks were freed -- no leaks are possible
+==46867== 
+==46867== For lists of detected and suppressed errors, rerun with: -s
+==46867== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+(base) ]0;antonio@antonio-Lenovo-IdeaPad-S145-15IWL: ~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[01;32mantonio@antonio-Lenovo-IdeaPad-S145-15IWL[00m:[01;34m~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[00m$ exit
+exit
+
+Script done on 2023-04-04 18:55:30-03:00 [COMMAND_EXIT_CODE="0"]

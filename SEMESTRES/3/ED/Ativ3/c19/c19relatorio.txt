@@ -1,0 +1,32 @@
+É percebido que o buf não possui uma alocação de memória. Depois do uso do valgrind, foi notado a não desalocação de memória do 
+buf e, após a execução do valgrind, o erro foi corretamente corrigido.
+
+Script started on 2023-04-04 19:25:15-03:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="160" LINES="17"]
+(base) ]0;antonio@antonio-Lenovo-IdeaPad-S145-15IWL: ~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[01;32mantonio@antonio-Lenovo-IdeaPad-S145-15IWL[00m:[01;34m~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[00m$ gcc -g c19[C/c19correto.c
+[01m[Kc19/c19correto.c:[m[K In function ‘[01m[KprintSum[m[K’:
+[01m[Kc19/c19correto.c:26:5:[m[K [01;35m[Kwarning: [m[Kattempt to free a non-heap object ‘[01m[Kline[m[K’ [[01;35m[K-Wfree-nonheap-object[m[K]
+   26 |     [01;35m[Kfree(line)[m[K;
+      |     [01;35m[K^~~~~~~~~~[m[K
+(base) ]0;antonio@antonio-Lenovo-IdeaPad-S145-15IWL: ~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[01;32mantonio@antonio-Lenovo-IdeaPad-S145-15IWL[00m:[01;34m~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[00m$ gcc -g c19/c19correto.c
+(base) ]0;antonio@antonio-Lenovo-IdeaPad-S145-15IWL: ~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[01;32mantonio@antonio-Lenovo-IdeaPad-S145-15IWL[00m:[01;34m~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[00m$ gcc -g c19/c19correto.cexit[Kvalgrind --leak-check=full ./a.out
+==51879== Memcheck, a memory error detector
+==51879== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==51879== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==51879== Command: ./a.out
+==51879== 
+enter a number:
+14
+sum=105
+==51879== 
+==51879== HEAP SUMMARY:
+==51879==     in use at exit: 0 bytes in 0 blocks
+==51879==   total heap usage: 3 allocs, 3 frees, 2,068 bytes allocated
+==51879== 
+==51879== All heap blocks were freed -- no leaks are possible
+==51879== 
+==51879== For lists of detected and suppressed errors, rerun with: -s
+==51879== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+(base) ]0;antonio@antonio-Lenovo-IdeaPad-S145-15IWL: ~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[01;32mantonio@antonio-Lenovo-IdeaPad-S145-15IWL[00m:[01;34m~/Desktop/Faculdade/SEMESTRES/3/ED/Ativ3[00m$ exit
+exit
+
+Script done on 2023-04-04 19:25:42-03:00 [COMMAND_EXIT_CODE="0"]
