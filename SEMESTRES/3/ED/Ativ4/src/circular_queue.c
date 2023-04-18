@@ -3,54 +3,60 @@
 
 #include "circular_queue.h"
 
-CircularQueue* create_queue(int n) {
-  CircularQueue *queue;
-  queue->v = (int *)malloc(sizeof(int)*n);
-  queue->max_size = n;
-  queue->front = queue->back = queue->size = 0;
+CircularQueue create_queue(int n) {
+  CircularQueue queue;
+  queue.v = (int *)malloc(sizeof(int)*n);
+
+  queue.max_size = n;
+  queue.front = queue.back = queue.size = 0;
   return queue;
 }
 
-void insert(CircularQueue *queue, int value) {
-  if(queue->size == queue->max_size) {
+CircularQueue insert(CircularQueue queue, int value) {
+  if(queue.size == queue.max_size) {
     printf("O tamanho da fila foi estourado!");
-    return;
+    return queue;
   }
-  queue->v[queue->back] = value;
-  queue->back = (queue->back + 1) % queue->max_size;
-  queue->size++;
+
+  queue.v[queue.back] = value;
+  queue.back = (queue.back + 1) % queue.max_size;
+
+  queue.size++;
+
+  return queue;
 }
 
-int empty(CircularQueue *queue) {
-  return queue->size == 0;
+int empty(CircularQueue queue) {
+  return queue.size == 0;
 }
 
-int front(CircularQueue *queue) {
+int front(CircularQueue queue) {
   if(empty(queue)) {
-    printf("A fila está vazia!");
+    printf("A fila está vazia!\n");
     return -1;
   }
-  return queue->v[queue->front];
+  return queue.v[queue.front];
 }
 
-void delete(CircularQueue *queue) {
+CircularQueue pop(CircularQueue queue) {
   if(empty(queue)) {
-    printf("A fila está vazia!");
-    return;
+    printf("A fila está vazia!\n");
+    return queue;
   }
-  queue->front = (queue->front + 1) % queue->max_size;
-  queue->size--;
+  queue.front = (queue.front + 1) % queue.max_size;
+  queue.size--;
+
+  return queue;
 }
 
-void destroy(CircularQueue *queue) {
-  free(queue->v);
-  free(queue);
+void destroy(CircularQueue queue) {
+  free(queue.v);
 }
 
-void print(CircularQueue *queue) {
-  for(int i = queue->front; i < queue->front + queue->size; i++) {
-    int idx = i % queue->max_size;
-    printf("%d ", queue->v[idx]);
+void print(CircularQueue queue) {
+  for(int i = queue.front; i < queue.front + queue.size; i++) {
+    int idx = i % queue.max_size;
+    printf("%d ", queue.v[idx]);
   }
   printf("\n");
 }

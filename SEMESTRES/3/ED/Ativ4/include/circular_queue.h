@@ -9,18 +9,18 @@ typedef struct CircularQueue {
   int max_size;
 } CircularQueue;
 
-CircularQueue* create_queue(int n);
+CircularQueue create_queue(int n);
 
-void insert(CircularQueue *queue, int value);
+CircularQueue insert(CircularQueue queue, int value);
 
-int empty(CircularQueue *queue);
+int empty(CircularQueue queue);
 
-int front(CircularQueue *queue);
+int front(CircularQueue queue);
 
-void delete(CircularQueue *queue);
+CircularQueue pop(CircularQueue queue);
 
-void destroy(CircularQueue *queue);
+void destroy(CircularQueue queue);
 
-void print(CircularQueue *queue);
+void print(CircularQueue queue);
 
 #endif
