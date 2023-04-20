@@ -13,8 +13,8 @@ SRC = src
 OBJ = obj
 INC = include
 BIN = bin
-OBJS = $(OBJ)/expression.o $(OBJ)/queue.o $(OBJ)/infixa.o $(OBJ)/posfixa.o $(OBJ)/main.o
-HDRS = $(INC)/queue.hpp $(INC)/operation.hpp $(INC)/expression.hpp $(INC)/posfixa.hpp $(INC)/infixa.hpp
+OBJS = $(OBJ)/expression.o $(OBJ)/infixa.o $(OBJ)/posfixa.o $(OBJ)/main.o
+HDRS = $(INC)/queue.hpp $(INC)/stack.hpp $(INC)/operation.hpp $(INC)/expression.hpp $(INC)/posfixa.hpp $(INC)/infixa.hpp
 CFLAGS = -Wall -c -g -I $(INC)
 
 EXE = $(BIN)/main
@@ -37,9 +37,6 @@ $(OBJ)/infixa.o: $(HDRS) $(SRC)/infixa.cpp
 	
 $(OBJ)/posfixa.o: $(HDRS) $(SRC)/posfixa.cpp
 	$(CC) $(CFLAGS) -o $(OBJ)/posfixa.o $(SRC)/posfixa.cpp
-
-$(OBJ)/queue.o: $(HDRS) $(SRC)/queue.cpp
-	$(CC) $(CFLAGS) -o $(OBJ)/queue.o $(SRC)/queue.cpp
 
 clean:
 	rm -f $(EXE) $(OBJS) gmon.out

@@ -4,9 +4,12 @@
 #include <iostream>
 #include "expression.hpp"
 
-class Posfixa : Expression {
+class Posfixa : public Expression {
     public:
         Posfixa();
+        virtual void build(std::string exp);
+        
+    friend class Expression;
 };
 
 #endif
