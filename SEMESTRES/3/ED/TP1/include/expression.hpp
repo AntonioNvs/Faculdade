@@ -7,11 +7,15 @@
 class Expression {
     public:
         Expression();
-        ~Expression();
+        virtual ~Expression();
         
-        bool recognition(std::string exp);
-        virtual std::string conversion();
-        virtual float solve();
+        bool validate(std::string exp);
+        bool is_digit(std::string str);
+        std::string replace_commons_to_dots(std::string str);
+
+        virtual void build(std::string exp) { return; };
+        virtual float solve() { return 0.0; };
+        virtual std::string conversion() { return ""; };
     private:
         Operation* head = nullptr;
 };

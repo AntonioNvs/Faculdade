@@ -7,6 +7,7 @@
 class Infixa : Expression {
     public:
         Infixa();
+        virtual void build(std::string exp);
 };
 
 #endif
