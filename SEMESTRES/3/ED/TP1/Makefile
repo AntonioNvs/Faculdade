@@ -17,14 +17,14 @@ OBJS = $(OBJ)/expression.o $(OBJ)/queue.o $(OBJ)/infixa.o $(OBJ)/posfixa.o $(OBJ
 HDRS = $(INC)/queue.hpp $(INC)/operation.hpp $(INC)/expression.hpp $(INC)/posfixa.hpp $(INC)/infixa.hpp
 CFLAGS = -Wall -c -g -I $(INC)
 
-EXE = $(BIN)/main
+EXE = $(BIN)/main.exe
 
 all: run
 run: $(EXE)
 	$(EXE) 
 
-$(BIN)/main: $(OBJS)
-	$(CC) -o $(BIN)/main $(OBJS)
+$(EXE): $(OBJS)
+	$(CC) -o $(EXE) $(OBJS)
 
 $(OBJ)/main.o: $(HDRS) $(SRC)/main.cpp
 	$(CC) $(CFLAGS) -o $(OBJ)/main.o $(SRC)/main.cpp
