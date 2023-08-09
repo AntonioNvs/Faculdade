@@ -1,0 +1,150 @@
+Query Number,Query Size
+a1,"(10, 1)"
+SELECT nome_fornecedor FROM favorecido WHERE uf='SP',"                                     nome_fornecedor
+0                        OSIRNET INFO TELECOM EIRELI
+1  FUNDACAO DE PREVIDENCIA COMPLEMENTAR DO SERVID...
+2                     VANLUZ PECAS E ACESSORIOS LTDA
+3              HERA SUL TRATAMENTOS DE RESIDUOS LTDA
+4  COOPERATIVA REGIONAL DE ELETRIF RURAL FRONTEIR...
+5        NETWARE TELECOMUNICACOES E INFORMATICA LTDA
+6                               KIOTO AMBIENTAL LTDA
+7       SECRETARIA ESP. DA RECEITA FEDERAL DO BRASIL
+8                                                ABC
+9                                             Nestle"
+a2,"(5, 2)"
+SELECT nome_fornecedor FROM favorecido WHERE uf='SP',"  codigo_empenho  valor_empenho
+0   2023NE000014     2110000.00
+1   2023NE000002    43599556.56
+2   2023NE000008     9764459.59
+3   2023NE000007    46049753.36
+4   2023NE000010     9794889.00"
+a3,"(1044, 2)"
+SELECT nome_fornecedor FROM favorecido WHERE uf='SP',"                                        nome_fornecedor  valor_empenho
+0                           OSIRNET INFO TELECOM EIRELI            2.0
+1     FUNDACAO DE PREVIDENCIA COMPLEMENTAR DO SERVID...            2.0
+2                        VANLUZ PECAS E ACESSORIOS LTDA            2.0
+3                 HERA SUL TRATAMENTOS DE RESIDUOS LTDA            2.0
+4                       HENRIQUE HONORIO PEREIRA CABRAL            2.0
+...                                                 ...            ...
+1039                                          Engefield          100.0
+1040                                                ABC          100.0
+1041                                             Nestle          100.0
+1042                                               Port          100.0
+1043                                      Pão de Açúcar          100.0
+
+[1044 rows x 2 columns]"
+a4,"(70, 2)"
+SELECT nome_fornecedor FROM favorecido WHERE uf='SP',"                                   nome_unidade  valor_empenho
+0   INSTITUTO NACIONAL DE EDUCACAO DE SURDOS-RJ       60000.00
+1   INSTITUTO NACIONAL DE EDUCACAO DE SURDOS-RJ           2.00
+2   INSTITUTO NACIONAL DE EDUCACAO DE SURDOS-RJ      300000.00
+3   INSTITUTO NACIONAL DE EDUCACAO DE SURDOS-RJ      223000.00
+4   INSTITUTO NACIONAL DE EDUCACAO DE SURDOS-RJ      830000.00
+..                                          ...            ...
+65  INSTITUTO NACIONAL DE EDUCACAO DE SURDOS-RJ       12209.28
+66  INSTITUTO NACIONAL DE EDUCACAO DE SURDOS-RJ        4000.00
+67  INSTITUTO NACIONAL DE EDUCACAO DE SURDOS-RJ       67000.00
+68  INSTITUTO NACIONAL DE EDUCACAO DE SURDOS-RJ         100.00
+69  INSTITUTO NACIONAL DE EDUCACAO DE SURDOS-RJ      850000.00
+
+[70 rows x 2 columns]"
+a5,"(8, 2)"
+SELECT nome_fornecedor FROM favorecido WHERE uf='SP',"   id_unidade                                 nome_unidade
+0           1   SUPERINTENDENCIA REGIONAL DA RFB NA 10A RF
+1           2  INSTITUTO NACIONAL DE EDUCACAO DE SURDOS-RJ
+2           3              DELEGACIA DA RFB EM SANTA MARIA
+3           4           SUPERINTENDENCIA ESTADUAL DO MS/MG
+4           5           SUPERINTENDENCIA ESTADUAL DO MS/PI
+5           6            DELEGACIA DA RFB EM CAXIAS DO SUL
+6           7    SUPERINTENDENCIA REGIONAL NO ESTADO DA BA
+7           8     COMANDO 5º BRIGADA DE CAVALARIA BLINDADA"
+q1,"(15, 3)"
+SELECT nome_fornecedor FROM favorecido WHERE uf='SP',"    id_empenho                                         observacao data_emissao
+0    506601548  ATENDER DESPESAS VARIAVEIS DE PESSOAL CIVIL AT...   2020-03-18
+1    507001630  EMPENHO PARA CONTRATO DE SERVICO DE INCINERACA...   2020-02-25
+2    509601561  PRESTACAO DE SERVICOS DE GERENCIAMENTO; CONTRO...   2020-06-12
+3    510501565   CONTRATACAO DE BANDA LARGA - INTERNET CHUI - RLE   2020-01-01
+4    511301583  ATENDER DESPESA COM DIARIAS DE COLABORADORES E...   2020-09-24
+5    511701585  ATENDER DESPESA COM SERVICOS PARA FINS DE MANU...   2020-09-17
+6    512001614  CONTRATO DE SERVICOS DE LAVAGEM DE  VEICULOS  ...   2020-01-16
+7    512301631  CONTRATO NR. 22/2018. ATENDER DESPESA COM SERV...   2020-02-22
+8    513201843  ATENDER DESPESAS COM PRESTACAO DE SERVICOS DE ...   2020-03-11
+9    513701584  ATENDER DESPESA COM DIARIAS DE PESSOAL CIVIL A...   2020-05-30
+10   521001622  ATENDER DESPESAS COM PAGAMENTO DE PENSOES CIVI...   2020-07-15
+11   524201553  ATENDER DESPESA COM SERVICOS DE: COMBATE A VET...   2020-11-27
+12   525001610  EMPENHO PARA ATENDER DESPESA COM TELEFONIA MOD...   2020-04-14
+13   525601604  CONTRATO 09/2020. PREGAO ELETRONICO 15/2020. -...   2020-02-28
+14   531001585  ATENDER DESPESA COM PAGAMENTO DE CONTRIBUICOES...   2020-02-08"
+q2,"(3, 2)"
+SELECT nome_fornecedor FROM favorecido WHERE uf='SP',"   uf  count(*)
+0  BA         1
+1  PR         3
+2  ES         6"
+q3,"(4, 2)"
+SELECT nome_fornecedor FROM favorecido WHERE uf='SP',"                                 nome_unidade  id_orgao
+0  SUPERINTENDENCIA REGIONAL DA RFB NA 10A RF         1
+1          SUPERINTENDENCIA ESTADUAL DO MS/MG         3
+2          SUPERINTENDENCIA ESTADUAL DO MS/PI         3
+3   SUPERINTENDENCIA REGIONAL NO ESTADO DA BA         4"
+q4,"(2, 2)"
+SELECT nome_fornecedor FROM favorecido WHERE uf='SP',"  codigo_empenho                                         observacao
+0   2023NE000004  COBRIR DESPESAS C/ CONTRATACAO DE SERVICO DE E...
+1   2023NE000018  COBRIR DESPESAS COM SERVICOS DE TELEFONIA MOVE..."
+q5,"(8, 2)"
+SELECT nome_fornecedor FROM favorecido WHERE uf='SP',"                               nome_fornecedor  count(*)
+0                                   CLARO S.A.         3
+1                           HENRIQUE GONCALVES         4
+2              HENRIQUE HONORIO PEREIRA CABRAL         2
+3  INSTITUTO NACIONAL DE EDUCACAO DE SURDOS-RJ        22
+4                 L. A. VIAGENS E TURISMO LTDA         5
+5  NETWARE TELECOMUNICACOES E INFORMATICA LTDA         2
+6                   RENOV AR CONDICIONADO LTDA         2
+7               VANLUZ PECAS E ACESSORIOS LTDA         7"
+q6,"(8, 2)"
+SELECT nome_fornecedor FROM favorecido WHERE uf='SP',"                                  nome_unidade  SUM(valor_total_item)
+0     COMANDO 5º BRIGADA DE CAVALARIA BLINDADA           4.680000e+03
+1            DELEGACIA DA RFB EM CAXIAS DO SUL           1.000000e+01
+2              DELEGACIA DA RFB EM SANTA MARIA           1.508299e+05
+3  INSTITUTO NACIONAL DE EDUCACAO DE SURDOS-RJ           1.144644e+08
+4           SUPERINTENDENCIA ESTADUAL DO MS/MG           1.278117e+04
+5           SUPERINTENDENCIA ESTADUAL DO MS/PI           1.122500e+03
+6   SUPERINTENDENCIA REGIONAL DA RFB NA 10A RF           1.190000e+02
+7    SUPERINTENDENCIA REGIONAL NO ESTADO DA BA           1.000000e+03"
+q7,"(2, 2)"
+SELECT nome_fornecedor FROM favorecido WHERE uf='SP',"               nome_orgao  count(*)
+0  Ministério da Economia        12
+1  Ministério da Educação        14"
+q8,"(70, 1)"
+SELECT nome_fornecedor FROM favorecido WHERE uf='SP',"    id_empenho
+0    504401556
+1    504601777
+2    504701525
+3    505301583
+4    505901545
+..         ...
+65   531901586
+66   532101552
+67   532201577
+68   532201593
+69   532501553
+
+[70 rows x 1 columns]"
+q9,"(3, 1)"
+SELECT nome_fornecedor FROM favorecido WHERE uf='SP',"                                  nome_unidade
+0  INSTITUTO NACIONAL DE EDUCACAO DE SURDOS-RJ
+1              DELEGACIA DA RFB EM SANTA MARIA
+2   SUPERINTENDENCIA REGIONAL DA RFB NA 10A RF"
+q10,"(12, 1)"
+SELECT nome_fornecedor FROM favorecido WHERE uf='SP',"                                            descricao
+0                     Baixa de saldos não liquidados.
+1   Item compra: 00001 - Estudos e Projetos de Rec...
+2   Item compra: 00001 - TAXA DE INSTALACAO/HABILI...
+3   Item compra: 00002 - TAXA DE INSTALACAO/HABILI...
+4   Item compra: 00003 - TAXA DE INSTALACAO/HABILI...
+5   Item compra: 00004 - Pacote de Serviços SMP (V...
+6   Item compra: 00004 - Pacote de Serviços SMP (V...
+7   Item compra: 00004 - TAXA DE INSTALACAO/HABILI...
+8   Item compra: 00006 - TAXA DE INSTALACAO/HABILI...
+9   Item compra: 00007 - TAXA DE INSTALACAO/HABILI...
+10  Item compra: 00008 - TAXA DE INSTALACAO/HABILI...
+11  Item compra: 00009 - TAXA DE INSTALACAO/HABILI..."

@@ -1,0 +1,50 @@
+--------------------------------------------------------------------------------
+Profile data file 'callgrind.out.31216' (creator: callgrind-3.15.0)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 3467416
+Trigger: Program termination
+Profiled target:  bin/main -o output.txt -s 10 -n 1000 (PID 31216, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       99
+Include dirs:     
+User annotated:   
+Auto-annotation:  off
+
+--------------------------------------------------------------------------------
+Ir         
+--------------------------------------------------------------------------------
+21,192,979  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir          file:function
+--------------------------------------------------------------------------------
+17,400,201  src/main.c:ancestral [/home/antonio/Desktop/Faculdade/SEMESTRES/3/ED/Ativ5/bin/main]
+   965,961  /build/glibc-SzIz7B/glibc-2.31/stdio-common/vfprintf-internal.c:__vfprintf_internal [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+   791,626  /build/glibc-SzIz7B/glibc-2.31/libio/fileops.c:_IO_file_xsputn@@GLIBC_2.2.5 [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+   326,904  /build/glibc-SzIz7B/glibc-2.31/libio/iofwrite.c:fwrite [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+   279,182  /build/glibc-SzIz7B/glibc-2.31/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:__mempcpy_avx_unaligned_erms [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+   193,764  /build/glibc-SzIz7B/glibc-2.31/stdio-common/_itoa.c:_itoa_word [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+   123,816  /build/glibc-SzIz7B/glibc-2.31/string/../sysdeps/x86_64/multiarch/strchr-avx2.S:__strchrnul_avx2 [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+   112,772  src/main.c:dumpTree'2 [/home/antonio/Desktop/Faculdade/SEMESTRES/3/ED/Ativ5/bin/main]
+   111,024  /build/glibc-SzIz7B/glibc-2.31/libio/libioP.h:fwrite
+   104,320  /build/glibc-SzIz7B/glibc-2.31/malloc/malloc.c:_int_malloc [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+    71,545  /build/glibc-SzIz7B/glibc-2.31/elf/dl-addr.c:_dl_addr [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+    68,603  /build/glibc-SzIz7B/glibc-2.31/stdlib/erand48_r.c:erand48_r [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+    54,065  src/main.c:createTree'2 [/home/antonio/Desktop/Faculdade/SEMESTRES/3/ED/Ativ5/bin/main]
+    50,116  /build/glibc-SzIz7B/glibc-2.31/stdio-common/../libio/libioP.h:__vfprintf_internal
+    42,047  /build/glibc-SzIz7B/glibc-2.31/stdlib/drand48-iter.c:__drand48_iterate [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+    41,272  /build/glibc-SzIz7B/glibc-2.31/stdio-common/printf-parse.h:__vfprintf_internal
+    36,850  /build/glibc-SzIz7B/glibc-2.31/stdio-common/fprintf.c:fprintf [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+    35,434  /build/glibc-SzIz7B/glibc-2.31/malloc/malloc.c:malloc [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+    33,195  /build/glibc-SzIz7B/glibc-2.31/stdlib/drand48.c:drand48 [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+    32,635  /build/glibc-SzIz7B/glibc-2.31/elf/dl-lookup.c:do_lookup_x [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+    31,686  ???:0x00000000049ba5a0 [???]
+    31,020  src/main.c:main [/home/antonio/Desktop/Faculdade/SEMESTRES/3/ED/Ativ5/bin/main]
+    28,992  /build/glibc-SzIz7B/glibc-2.31/elf/dl-tunables.c:__GI___tunables_init [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+    27,252  src/main.c:build_posordem'2 [/home/antonio/Desktop/Faculdade/SEMESTRES/3/ED/Ativ5/bin/main]
+

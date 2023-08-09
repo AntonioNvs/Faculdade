@@ -1,0 +1,18 @@
+Nome: Antônio Caetano Neves Neto
+Matrícula: 2022043698
+
+Primeiramente, será feito um gerador de números aleatórios que utiiza o sistema de definição de SEED automática
+para randomizar os valores que estarão dentro do vetor, dessa forma garantindo arrays estocásticos para teste.
+
+Segundo, os valores de N, sendo N o tamanho do vetor, serão selecionados exponenciamente na base 10, ou seja,
+com x sendo números entre 1 e 8 com espaçamento de 0.5, ou seja, formando o vetor [1, 1.5, 2, ..., 7.5, 8]. Assim,
+N será igual a N = 10^x
+
+Por fim, o parâmetro h do shellsort será testado de forma linear entre 1.5 e 3, com espaçamento entre 0.25 no vetor,
+formando [1.5, 1.75, 2.0, 2.25, 2.5, 2.75, 3.0], sendo esse valor o número da divisão de h a cada iteração. O valor
+inicial de h será o N/x, sendo x um número do vetor dado, e a cada iteração será dividido o valor de h por x.
+
+Portanto, a bateria de testes será feita com a testagem de todos os números descritos do shellsort de divisor para o h,
+e depois o mesmo teste mas com o heapsort para ter um controle. Adquirindo o tempo de usuário, sistema e relógio de cada tupla
+de parâmetros, é feito 10 testes com a mesma configuração e feito a média, salvando em um arquivo csv, onde será possível
+realizar as análises posterior, podendo inferir conclusões.

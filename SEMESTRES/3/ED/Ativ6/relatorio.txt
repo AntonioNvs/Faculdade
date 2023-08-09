@@ -1,0 +1,53 @@
+1. Avalie qualitativamente o programa a ser caracterizado em termos dos acessos de memória esperados e localidade de referência. Identifique as estruturas de dados e segmentos de código críticos (p.ex., mais custosos)
+
+O programa analisado é o sistema da prática 5, que visa utilizar os caminhamentos pós ordem e pré ordem
+para identificar ancestralidade de dois nós.
+
+O que podemos identificar no código é o uso de apontamentos de memória para os nós da árvore de forma não
+sequencial, pois para acessar o nó de um certo nível da árvore, é necessário caminhar durante ela, o que faz
+com que a pilha de localidade de referência aumente devido a recursão utilizada.
+
+Logo, a forma de armazenamento da árvore é um segmento crítico, pois seu uso dessa forma torna todos os algoritmos
+de caminhamento ruins em questão de acesso de memória.
+
+Uma possível solução para o problema seria utilizar um array sequencial, que facilitia o acesso de memória, para
+armazenar a árvore, pois ao indexar os nossos nós pelos níveis, conseguimos acessar o filho esquerdo do nó i na 
+posição 2*i e o filho direito na posição 2*i + 1. Assim, não serie necessário adicionar novos acessos na pilha de
+registro de memória, tanto por causa da alocação sequencial, quanto por causa da diminuição da complexidade do algoritmo de
+ancestralidade.
+
+2. Elabore o plano de caracterização de localidade de referência, nesse momento indicando as execuções e ferramentas a serem realizadas e porque.
+
+Definição dos objetivos:
+
+    Analisar a eficiência e complexidade do algoritmo.
+    Comparar o desempenho do algoritmo com outras soluções existentes.
+
+Identificação do algoritmo:
+    Escolher o algoritmo a ser caracterizado, levando em consideração sua relevância e aplicabilidade.
+
+Execuções e coleta de dados:
+
+    Definir conjuntos de dados de entrada representativos.
+    Executar o algoritmo com diferentes conjuntos de dados.
+    Coletar os resultados produzidos pelo algoritmo para posterior análise.
+
+Análise dos resultados:
+
+    Verificar a escalabilidade do algoritmo, analisando seu comportamento com conjuntos de dados de diferentes tamanhos.
+    Realizar uma comparação com outros algoritmos relevantes, se aplicável.
+
+Ferramentas a serem utilizadas:
+
+    Conjuntos de dados de teste representativos.
+    Ferramentas de monitoramento de recursos para medir o consumo de recursos.
+        - valgrind
+        - cachegrind
+    Ferramentas de visualização, se necessário, para apresentar os resultados de forma clara
+
+
+3. Selecione os parâmetros do programa a ser caracterizado
+
+Os parâmetros de análise é a construção da árvore, as funções de caminhamento e a função de verificação de ancestralidade.
+
+4. Execute o código com Cachegrind:

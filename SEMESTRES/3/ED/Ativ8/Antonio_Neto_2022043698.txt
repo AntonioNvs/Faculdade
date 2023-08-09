@@ -1,0 +1,44 @@
+Nome: Antônio Caetano Neves Neto
+Matrícula: 2022043698
+
+Código: Detector de Ancestralidade de 2 elementos i,j de uma árvore binária
+através dos vetores gerados a partir do caminhamento.
+
+1- Estruturas de dados a serem monitorizadas:
+Os vetores gerados a partir de cada caminhamento na árvore binária.
+Vetor pré-ordem (ID 2)
+Vetor pós-ordem (ID 3)
+Vetor in-ordem (ID 4)
+
+2- Funções a serem instrumentadas:
+
+Funções de geradores de vetor a partir dos caminhamentos in-ordem, pré-ordem e
+pós-ordem da árvore binária. (Essa seria a inicialização dos vetores)*
+
+Função de ancestralidade diretamente, que trabalha acessando os elementos do vetor.
+
+3- Fases de Monitoramento
+Descrição: Visto que a inicialização dos vetores se dá a partir dos acessos a estrutura
+de árvore (caminhamentos), é interessante realizar uma análise da localidade de referência.
+Portanto, será necessário mais do que 2 fases, visto que anterior a inicialização dos vetores
+devemos acessar a memória da árvore.
+
+1° Fase: Alocação dos vetores de caminhamento + Inicialização dos vetores a partir dos caminhamentos.
+Nesse ponto, a árvore foi constrúida e cada posição já foi acessada uma vez, na ordem em que foi construída.
+Portanto a memória da árvore já esta aquecida. Então será realizada a análise da localidade de referência da árvore
+ao mesmo tempo que os vetores são inicializados.
+
+2° Fase: Aquecimento da Memória dos vetores para otimizar a análise de localidade de referência da função
+de ancestralidade, que trabalha com leitura desses espaços de memória.
+
+3° Fase: Análise da localidade de referência da função de ancestralidade, através da distância de pilha.
+Nesse ponto, utilizaremos apenas os vetores de pré-ordem e pós-ordem, previamente aquecidos.
+A partir dos dados obtidos, será possível fazer uma análise da localidade de referência da distância de pilha
+da função de detecção de ancestralidade.
+
+4- Instrumentação do código:
+
+O código com as instrumentações prévias estará na junto do arquivo de texto.
+OBS: Como mencionado na atividade o código pode não compilar.
+
+*Os ID's de identificação da estrutura se encontram no tópico 2.

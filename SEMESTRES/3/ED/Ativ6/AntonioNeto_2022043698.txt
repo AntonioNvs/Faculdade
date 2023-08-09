@@ -1,0 +1,14 @@
+O programa analisado é o sistema da prática 5, que visa utilizar os caminhamentos pós ordem e pré ordem
+para identificar ancestralidade de dois nós.
+
+O que podemos identificar no código é o uso de apontamentos de memória para os nós da árvore de forma não
+sequencial, pois para acessar o nó de um certo nível da árvore, é necessário caminhar durante ela, o que faz
+com que a pilha de localidade de referência aumente devido a recursão utilizada.
+
+Logo, a forma de armazenamento da árvore é um segmento crítico, pois seu uso dessa forma torna todos os algoritmos
+de caminhamento ruins em questão de acesso de memória.
+
+Uma possível solução para o problema seria utilizar um array sequencial, que facilitia o acesso de memória, para
+armazenar a árvore, pois ao indexar os nossos nós pelos níveis, conseguimos acessar o filho esquerdo do nó i na 
+posição 2*i e o filho direito na posição 2*i + 1. Assim, não serie necessário adicionar novos acessos na pilha de
+registro de memória.

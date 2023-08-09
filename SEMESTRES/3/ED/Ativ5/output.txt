@@ -1,0 +1,1474 @@
+   0 (0)
+       1 (1)
+           2 (2)
+               3 (3)
+                   4 (4)
+                       5 (5)
+                           6 (6)
+                               7 (7)
+                                   8 (8)
+                                       9 (9)
+                                          10 (10)
+                                              11 (11)
+                                                  12 (12)
+                                                      13 (13)
+                                                      14 (13)
+                                                          15 (14)
+                                                          16 (14)
+                                                  17 (12)
+                                                      18 (13)
+                                                          19 (14)
+                                                          20 (14)
+                                                      21 (13)
+                                              22 (11)
+                                          23 (10)
+                                              24 (11)
+                                                  25 (12)
+                                                      26 (13)
+                                                      27 (13)
+                                                  28 (12)
+                                                      29 (13)
+                                                      30 (13)
+                                              31 (11)
+                                                  32 (12)
+                                                      33 (13)
+                                                      34 (13)
+                                                  35 (12)
+                                      36 (9)
+                                          37 (10)
+                                          38 (10)
+                                              39 (11)
+                                              40 (11)
+                                                  41 (12)
+                                                  42 (12)
+                                  43 (8)
+                                      44 (9)
+                                          45 (10)
+                                          46 (10)
+                                              47 (11)
+                                              48 (11)
+                                                  49 (12)
+                                                      50 (13)
+                                                      51 (13)
+                                                  52 (12)
+                                                      53 (13)
+                                                      54 (13)
+                                      55 (9)
+                                          56 (10)
+                                              57 (11)
+                                              58 (11)
+                                          59 (10)
+                                              60 (11)
+                                              61 (11)
+                                                  62 (12)
+                                                  63 (12)
+                              64 (7)
+                                  65 (8)
+                                      66 (9)
+                                          67 (10)
+                                              68 (11)
+                                              69 (11)
+                                          70 (10)
+                                      71 (9)
+                                          72 (10)
+                                          73 (10)
+                                              74 (11)
+                                                  75 (12)
+                                                  76 (12)
+                                              77 (11)
+                                  78 (8)
+                                      79 (9)
+                                      80 (9)
+                                          81 (10)
+                                              82 (11)
+                                              83 (11)
+                                                  84 (12)
+                                                  85 (12)
+                                          86 (10)
+                          87 (6)
+                              88 (7)
+                                  89 (8)
+                                      90 (9)
+                                      91 (9)
+                                          92 (10)
+                                              93 (11)
+                                                  94 (12)
+                                                  95 (12)
+                                              96 (11)
+                                          97 (10)
+                                  98 (8)
+                                      99 (9)
+                                         100 (10)
+                                             101 (11)
+                                             102 (11)
+                                                 103 (12)
+                                                 104 (12)
+                                         105 (10)
+                                             106 (11)
+                                                 107 (12)
+                                                 108 (12)
+                                             109 (11)
+                                     110 (9)
+                             111 (7)
+                                 112 (8)
+                                     113 (9)
+                                         114 (10)
+                                         115 (10)
+                                     116 (9)
+                                 117 (8)
+                                     118 (9)
+                                         119 (10)
+                                         120 (10)
+                                     121 (9)
+                     122 (5)
+                         123 (6)
+                             124 (7)
+                                 125 (8)
+                                     126 (9)
+                                         127 (10)
+                                         128 (10)
+                                     129 (9)
+                                 130 (8)
+                                     131 (9)
+                                         132 (10)
+                                         133 (10)
+                                             134 (11)
+                                             135 (11)
+                                     136 (9)
+                                         137 (10)
+                                         138 (10)
+                             139 (7)
+                                 140 (8)
+                                 141 (8)
+                                     142 (9)
+                                     143 (9)
+                                         144 (10)
+                                         145 (10)
+                                             146 (11)
+                                             147 (11)
+                         148 (6)
+                             149 (7)
+                                 150 (8)
+                                     151 (9)
+                                         152 (10)
+                                         153 (10)
+                                     154 (9)
+                                         155 (10)
+                                             156 (11)
+                                             157 (11)
+                                         158 (10)
+                                 159 (8)
+                                     160 (9)
+                                     161 (9)
+                                         162 (10)
+                                         163 (10)
+                             164 (7)
+                                 165 (8)
+                                     166 (9)
+                                         167 (10)
+                                         168 (10)
+                                             169 (11)
+                                             170 (11)
+                                     171 (9)
+                                         172 (10)
+                                         173 (10)
+                                 174 (8)
+                                     175 (9)
+                                         176 (10)
+                                             177 (11)
+                                             178 (11)
+                                         179 (10)
+                                             180 (11)
+                                             181 (11)
+                                     182 (9)
+                                         183 (10)
+                                         184 (10)
+                 185 (4)
+                     186 (5)
+                         187 (6)
+                             188 (7)
+                                 189 (8)
+                                     190 (9)
+                                         191 (10)
+                                         192 (10)
+                                             193 (11)
+                                             194 (11)
+                                     195 (9)
+                                         196 (10)
+                                         197 (10)
+                                 198 (8)
+                                     199 (9)
+                                         200 (10)
+                                             201 (11)
+                                             202 (11)
+                                         203 (10)
+                                             204 (11)
+                                             205 (11)
+                                     206 (9)
+                                         207 (10)
+                                         208 (10)
+                                             209 (11)
+                                             210 (11)
+                             211 (7)
+                                 212 (8)
+                                     213 (9)
+                                         214 (10)
+                                         215 (10)
+                                     216 (9)
+                                 217 (8)
+                                     218 (9)
+                                         219 (10)
+                                         220 (10)
+                                     221 (9)
+                                         222 (10)
+                                         223 (10)
+                         224 (6)
+                             225 (7)
+                                 226 (8)
+                                     227 (9)
+                                         228 (10)
+                                         229 (10)
+                                     230 (9)
+                                 231 (8)
+                             232 (7)
+                                 233 (8)
+                                     234 (9)
+                                         235 (10)
+                                             236 (11)
+                                             237 (11)
+                                         238 (10)
+                                     239 (9)
+                                         240 (10)
+                                         241 (10)
+                                 242 (8)
+                                     243 (9)
+                                     244 (9)
+                     245 (5)
+                         246 (6)
+                         247 (6)
+                             248 (7)
+                                 249 (8)
+                                     250 (9)
+                                         251 (10)
+                                         252 (10)
+                                     253 (9)
+                                 254 (8)
+                                     255 (9)
+                                     256 (9)
+                                         257 (10)
+                                         258 (10)
+                             259 (7)
+                                 260 (8)
+                                     261 (9)
+                                         262 (10)
+                                         263 (10)
+                                     264 (9)
+                                         265 (10)
+                                         266 (10)
+                                 267 (8)
+                                     268 (9)
+                                         269 (10)
+                                         270 (10)
+                                     271 (9)
+             272 (3)
+                 273 (4)
+                     274 (5)
+                         275 (6)
+                             276 (7)
+                                 277 (8)
+                                 278 (8)
+                                     279 (9)
+                                         280 (10)
+                                         281 (10)
+                                     282 (9)
+                                         283 (10)
+                                         284 (10)
+                             285 (7)
+                                 286 (8)
+                                     287 (9)
+                                     288 (9)
+                                         289 (10)
+                                         290 (10)
+                                 291 (8)
+                                     292 (9)
+                                     293 (9)
+                         294 (6)
+                             295 (7)
+                                 296 (8)
+                                     297 (9)
+                                         298 (10)
+                                         299 (10)
+                                     300 (9)
+                                         301 (10)
+                                         302 (10)
+                                 303 (8)
+                                     304 (9)
+                                     305 (9)
+                             306 (7)
+                                 307 (8)
+                                     308 (9)
+                                     309 (9)
+                                 310 (8)
+                                     311 (9)
+                                     312 (9)
+                     313 (5)
+                         314 (6)
+                             315 (7)
+                                 316 (8)
+                                 317 (8)
+                                     318 (9)
+                                         319 (10)
+                                         320 (10)
+                                     321 (9)
+                             322 (7)
+                                 323 (8)
+                                     324 (9)
+                                     325 (9)
+                                 326 (8)
+                                     327 (9)
+                                     328 (9)
+                                         329 (10)
+                                         330 (10)
+                         331 (6)
+                             332 (7)
+                                 333 (8)
+                                 334 (8)
+                             335 (7)
+                                 336 (8)
+                                     337 (9)
+                                     338 (9)
+                                         339 (10)
+                                         340 (10)
+                                 341 (8)
+                                     342 (9)
+                                         343 (10)
+                                         344 (10)
+                                     345 (9)
+                 346 (4)
+                     347 (5)
+                         348 (6)
+                             349 (7)
+                                 350 (8)
+                                     351 (9)
+                                     352 (9)
+                                 353 (8)
+                                     354 (9)
+                                     355 (9)
+                             356 (7)
+                                 357 (8)
+                                     358 (9)
+                                         359 (10)
+                                         360 (10)
+                                     361 (9)
+                                 362 (8)
+                                     363 (9)
+                                     364 (9)
+                         365 (6)
+                             366 (7)
+                                 367 (8)
+                                     368 (9)
+                                     369 (9)
+                                         370 (10)
+                                         371 (10)
+                                 372 (8)
+                                     373 (9)
+                                     374 (9)
+                                         375 (10)
+                                         376 (10)
+                             377 (7)
+                                 378 (8)
+                                     379 (9)
+                                     380 (9)
+                                 381 (8)
+                     382 (5)
+                         383 (6)
+                         384 (6)
+                             385 (7)
+                                 386 (8)
+                                     387 (9)
+                                     388 (9)
+                                 389 (8)
+                                     390 (9)
+                                     391 (9)
+                             392 (7)
+                                 393 (8)
+                                     394 (9)
+                                     395 (9)
+                                 396 (8)
+                                     397 (9)
+                                     398 (9)
+         399 (2)
+             400 (3)
+             401 (3)
+                 402 (4)
+                     403 (5)
+                         404 (6)
+                             405 (7)
+                                 406 (8)
+                                     407 (9)
+                                         408 (10)
+                                         409 (10)
+                                     410 (9)
+                                 411 (8)
+                                     412 (9)
+                                     413 (9)
+                             414 (7)
+                                 415 (8)
+                                     416 (9)
+                                     417 (9)
+                                 418 (8)
+                         419 (6)
+                             420 (7)
+                             421 (7)
+                                 422 (8)
+                                 423 (8)
+                                     424 (9)
+                                     425 (9)
+                     426 (5)
+                         427 (6)
+                             428 (7)
+                                 429 (8)
+                                     430 (9)
+                                     431 (9)
+                                         432 (10)
+                                         433 (10)
+                                 434 (8)
+                             435 (7)
+                                 436 (8)
+                                     437 (9)
+                                         438 (10)
+                                         439 (10)
+                                     440 (9)
+                                 441 (8)
+                                     442 (9)
+                                     443 (9)
+                         444 (6)
+                             445 (7)
+                             446 (7)
+                                 447 (8)
+                                 448 (8)
+                 449 (4)
+                     450 (5)
+                         451 (6)
+                             452 (7)
+                             453 (7)
+                                 454 (8)
+                                 455 (8)
+                                     456 (9)
+                                     457 (9)
+                         458 (6)
+                             459 (7)
+                                 460 (8)
+                                     461 (9)
+                                         462 (10)
+                                         463 (10)
+                                     464 (9)
+                                 465 (8)
+                                     466 (9)
+                                     467 (9)
+                             468 (7)
+                                 469 (8)
+                                     470 (9)
+                                     471 (9)
+                                 472 (8)
+                     473 (5)
+                         474 (6)
+                             475 (7)
+                                 476 (8)
+                                 477 (8)
+                                     478 (9)
+                                     479 (9)
+                             480 (7)
+                         481 (6)
+                             482 (7)
+                                 483 (8)
+                                 484 (8)
+                             485 (7)
+     486 (1)
+         487 (2)
+             488 (3)
+                 489 (4)
+                     490 (5)
+                         491 (6)
+                             492 (7)
+                                 493 (8)
+                                     494 (9)
+                                     495 (9)
+                                 496 (8)
+                             497 (7)
+                                 498 (8)
+                                 499 (8)
+                                     500 (9)
+                                     501 (9)
+                         502 (6)
+                             503 (7)
+                                 504 (8)
+                                     505 (9)
+                                     506 (9)
+                                 507 (8)
+                             508 (7)
+                                 509 (8)
+                                 510 (8)
+                                     511 (9)
+                                     512 (9)
+                     513 (5)
+                         514 (6)
+                             515 (7)
+                             516 (7)
+                         517 (6)
+                             518 (7)
+                             519 (7)
+                                 520 (8)
+                                     521 (9)
+                                     522 (9)
+                                 523 (8)
+                                     524 (9)
+                                     525 (9)
+                 526 (4)
+                     527 (5)
+                         528 (6)
+                             529 (7)
+                                 530 (8)
+                                     531 (9)
+                                     532 (9)
+                                 533 (8)
+                             534 (7)
+                                 535 (8)
+                                     536 (9)
+                                     537 (9)
+                                 538 (8)
+                         539 (6)
+                             540 (7)
+                                 541 (8)
+                                 542 (8)
+                             543 (7)
+                                 544 (8)
+                                     545 (9)
+                                     546 (9)
+                                 547 (8)
+                                     548 (9)
+                                     549 (9)
+                     550 (5)
+                         551 (6)
+                             552 (7)
+                                 553 (8)
+                                 554 (8)
+                             555 (7)
+                                 556 (8)
+                                 557 (8)
+                         558 (6)
+                             559 (7)
+                                 560 (8)
+                                 561 (8)
+                             562 (7)
+                                 563 (8)
+                                 564 (8)
+             565 (3)
+                 566 (4)
+                     567 (5)
+                         568 (6)
+                             569 (7)
+                                 570 (8)
+                                 571 (8)
+                             572 (7)
+                         573 (6)
+                             574 (7)
+                                 575 (8)
+                                 576 (8)
+                                     577 (9)
+                                     578 (9)
+                             579 (7)
+                     580 (5)
+                         581 (6)
+                             582 (7)
+                                 583 (8)
+                                 584 (8)
+                                     585 (9)
+                                     586 (9)
+                             587 (7)
+                                 588 (8)
+                                     589 (9)
+                                     590 (9)
+                                 591 (8)
+                                     592 (9)
+                                     593 (9)
+                         594 (6)
+                 595 (4)
+                     596 (5)
+                         597 (6)
+                         598 (6)
+                             599 (7)
+                                 600 (8)
+                                 601 (8)
+                             602 (7)
+                                 603 (8)
+                                     604 (9)
+                                     605 (9)
+                                 606 (8)
+                     607 (5)
+                         608 (6)
+                             609 (7)
+                                 610 (8)
+                                 611 (8)
+                             612 (7)
+                                 613 (8)
+                                     614 (9)
+                                     615 (9)
+                                 616 (8)
+                         617 (6)
+                             618 (7)
+                                 619 (8)
+                                 620 (8)
+                             621 (7)
+                                 622 (8)
+                                 623 (8)
+         624 (2)
+             625 (3)
+                 626 (4)
+                     627 (5)
+                         628 (6)
+                             629 (7)
+                             630 (7)
+                         631 (6)
+                             632 (7)
+                             633 (7)
+                     634 (5)
+                         635 (6)
+                             636 (7)
+                                 637 (8)
+                                 638 (8)
+                                     639 (9)
+                                     640 (9)
+                             641 (7)
+                                 642 (8)
+                                 643 (8)
+                         644 (6)
+                             645 (7)
+                                 646 (8)
+                                     647 (9)
+                                     648 (9)
+                                 649 (8)
+                             650 (7)
+                                 651 (8)
+                                 652 (8)
+                 653 (4)
+                     654 (5)
+                         655 (6)
+                             656 (7)
+                                 657 (8)
+                                     658 (9)
+                                     659 (9)
+                                 660 (8)
+                             661 (7)
+                                 662 (8)
+                                     663 (9)
+                                     664 (9)
+                                 665 (8)
+                         666 (6)
+                             667 (7)
+                             668 (7)
+                                 669 (8)
+                                 670 (8)
+                                     671 (9)
+                                     672 (9)
+                     673 (5)
+                         674 (6)
+                             675 (7)
+                             676 (7)
+                                 677 (8)
+                                     678 (9)
+                                     679 (9)
+                                 680 (8)
+                         681 (6)
+                             682 (7)
+                                 683 (8)
+                                     684 (9)
+                                     685 (9)
+                                 686 (8)
+                             687 (7)
+             688 (3)
+                 689 (4)
+                     690 (5)
+                         691 (6)
+                             692 (7)
+                             693 (7)
+                                 694 (8)
+                                 695 (8)
+                         696 (6)
+                             697 (7)
+                                 698 (8)
+                                 699 (8)
+                             700 (7)
+                                 701 (8)
+                                 702 (8)
+                     703 (5)
+                         704 (6)
+                         705 (6)
+                 706 (4)
+                     707 (5)
+                         708 (6)
+                             709 (7)
+                                 710 (8)
+                                     711 (9)
+                                     712 (9)
+                                 713 (8)
+                                     714 (9)
+                                     715 (9)
+                             716 (7)
+                         717 (6)
+                             718 (7)
+                                 719 (8)
+                                 720 (8)
+                                     721 (9)
+                                     722 (9)
+                             723 (7)
+                                 724 (8)
+                                 725 (8)
+                     726 (5)
+                         727 (6)
+                             728 (7)
+                                 729 (8)
+                                 730 (8)
+                                     731 (9)
+                                     732 (9)
+                             733 (7)
+                                 734 (8)
+                                 735 (8)
+                         736 (6)
+0 testando ancestral(271,656) = 0
+1 testando ancestral(253,633) = 0
+2 testando ancestral(282,488) = 0
+3 testando ancestral(140,530) = 0
+4 testando ancestral(152,324) = 0
+5 testando ancestral(735,614) = 0
+6 testando ancestral(308,678) = 0
+7 testando ancestral(217,214) = 0
+8 testando ancestral(540,84) = 0
+9 testando ancestral(80,375) = 0
+10 testando ancestral(220,269) = 0
+11 testando ancestral(581,98) = 0
+12 testando ancestral(498,150) = 0
+13 testando ancestral(272,159) = 0
+14 testando ancestral(474,328) = 0
+15 testando ancestral(642,434) = 0
+16 testando ancestral(310,416) = 0
+17 testando ancestral(113,367) = 0
+18 testando ancestral(13,419) = 0
+19 testando ancestral(555,393) = 0
+20 testando ancestral(435,75) = 0
+21 testando ancestral(373,238) = 0
+22 testando ancestral(382,658) = 0
+23 testando ancestral(689,452) = 0
+24 testando ancestral(177,241) = 0
+25 testando ancestral(452,458) = 0
+26 testando ancestral(646,469) = 0
+27 testando ancestral(432,543) = 0
+28 testando ancestral(415,707) = 0
+29 testando ancestral(27,23) = 0
+30 testando ancestral(170,190) = 0
+31 testando ancestral(235,545) = 0
+32 testando ancestral(477,407) = 0
+33 testando ancestral(388,132) = 0
+34 testando ancestral(589,11) = 0
+35 testando ancestral(286,729) = 0
+36 testando ancestral(552,579) = 0
+37 testando ancestral(288,177) = 0
+38 testando ancestral(497,646) = 0
+39 testando ancestral(66,614) = 0
+40 testando ancestral(481,327) = 0
+41 testando ancestral(9,560) = 0
+42 testando ancestral(411,181) = 0
+43 testando ancestral(673,346) = 0
+44 testando ancestral(142,48) = 0
+45 testando ancestral(229,714) = 0
+46 testando ancestral(576,493) = 0
+47 testando ancestral(639,587) = 0
+48 testando ancestral(552,677) = 0
+49 testando ancestral(474,638) = 0
+50 testando ancestral(148,437) = 0
+51 testando ancestral(140,198) = 0
+52 testando ancestral(360,202) = 0
+53 testando ancestral(667,284) = 0
+54 testando ancestral(423,147) = 0
+55 testando ancestral(436,414) = 0
+56 testando ancestral(375,650) = 0
+57 testando ancestral(229,644) = 0
+58 testando ancestral(618,390) = 0
+59 testando ancestral(52,110) = 0
+60 testando ancestral(395,162) = 0
+61 testando ancestral(535,648) = 0
+62 testando ancestral(237,349) = 0
+63 testando ancestral(195,363) = 0
+64 testando ancestral(555,247) = 0
+65 testando ancestral(124,42) = 0
+66 testando ancestral(209,449) = 0
+67 testando ancestral(258,458) = 0
+68 testando ancestral(315,24) = 0
+69 testando ancestral(393,391) = 0
+70 testando ancestral(252,433) = 0
+71 testando ancestral(303,250) = 0
+72 testando ancestral(347,571) = 0
+73 testando ancestral(340,490) = 0
+74 testando ancestral(194,371) = 0
+75 testando ancestral(242,100) = 0
+76 testando ancestral(546,654) = 0
+77 testando ancestral(519,447) = 0
+78 testando ancestral(264,482) = 0
+79 testando ancestral(197,139) = 0
+80 testando ancestral(650,422) = 0
+81 testando ancestral(231,219) = 0
+82 testando ancestral(124,161) = 0
+83 testando ancestral(690,342) = 0
+84 testando ancestral(584,585) = 1
+85 testando ancestral(345,694) = 0
+86 testando ancestral(337,454) = 0
+87 testando ancestral(703,65) = 0
+88 testando ancestral(230,231) = 0
+89 testando ancestral(569,43) = 0
+90 testando ancestral(416,550) = 0
+91 testando ancestral(603,402) = 0
+92 testando ancestral(451,23) = 0
+93 testando ancestral(309,223) = 0
+94 testando ancestral(15,649) = 0
+95 testando ancestral(92,194) = 0
+96 testando ancestral(584,217) = 0
+97 testando ancestral(521,178) = 0
+98 testando ancestral(703,515) = 0
+99 testando ancestral(736,264) = 0
+100 testando ancestral(517,49) = 0
+101 testando ancestral(730,93) = 0
+102 testando ancestral(174,649) = 0
+103 testando ancestral(632,67) = 0
+104 testando ancestral(394,461) = 0
+105 testando ancestral(254,374) = 0
+106 testando ancestral(355,486) = 0
+107 testando ancestral(1,461) = 1
+108 testando ancestral(617,21) = 0
+109 testando ancestral(611,158) = 0
+110 testando ancestral(5,731) = 0
+111 testando ancestral(582,214) = 0
+112 testando ancestral(514,489) = 0
+113 testando ancestral(394,609) = 0
+114 testando ancestral(429,232) = 0
+115 testando ancestral(406,286) = 0
+116 testando ancestral(342,59) = 0
+117 testando ancestral(199,205) = 1
+118 testando ancestral(281,308) = 0
+119 testando ancestral(545,716) = 0
+120 testando ancestral(84,527) = 0
+121 testando ancestral(36,471) = 0
+122 testando ancestral(578,429) = 0
+123 testando ancestral(189,563) = 0
+124 testando ancestral(349,194) = 0
+125 testando ancestral(262,309) = 0
+126 testando ancestral(628,717) = 0
+127 testando ancestral(252,353) = 0
+128 testando ancestral(637,172) = 0
+129 testando ancestral(350,5) = 0
+130 testando ancestral(98,227) = 0
+131 testando ancestral(643,319) = 0
+132 testando ancestral(276,478) = 0
+133 testando ancestral(49,686) = 0
+134 testando ancestral(70,638) = 0
+135 testando ancestral(315,161) = 0
+136 testando ancestral(652,698) = 0
+137 testando ancestral(397,527) = 0
+138 testando ancestral(720,199) = 0
+139 testando ancestral(36,477) = 0
+140 testando ancestral(134,652) = 0
+141 testando ancestral(546,14) = 0
+142 testando ancestral(17,677) = 0
+143 testando ancestral(112,644) = 0
+144 testando ancestral(734,479) = 0
+145 testando ancestral(669,429) = 0
+146 testando ancestral(50,370) = 0
+147 testando ancestral(497,616) = 0
+148 testando ancestral(379,336) = 0
+149 testando ancestral(622,233) = 0
+150 testando ancestral(188,624) = 0
+151 testando ancestral(120,521) = 0
+152 testando ancestral(27,431) = 0
+153 testando ancestral(584,331) = 0
+154 testando ancestral(153,181) = 0
+155 testando ancestral(152,48) = 0
+156 testando ancestral(531,186) = 0
+157 testando ancestral(404,216) = 0
+158 testando ancestral(228,355) = 0
+159 testando ancestral(182,622) = 0
+160 testando ancestral(726,481) = 0
+161 testando ancestral(679,446) = 0
+162 testando ancestral(676,4) = 0
+163 testando ancestral(449,711) = 0
+164 testando ancestral(40,202) = 0
+165 testando ancestral(590,690) = 0
+166 testando ancestral(127,83) = 0
+167 testando ancestral(204,556) = 0
+168 testando ancestral(189,648) = 0
+169 testando ancestral(512,462) = 0
+170 testando ancestral(625,371) = 0
+171 testando ancestral(580,628) = 0
+172 testando ancestral(137,406) = 0
+173 testando ancestral(615,227) = 0
+174 testando ancestral(34,230) = 0
+175 testando ancestral(303,237) = 0
+176 testando ancestral(410,644) = 0
+177 testando ancestral(439,638) = 0
+178 testando ancestral(664,404) = 0
+179 testando ancestral(463,123) = 0
+180 testando ancestral(423,450) = 0
+181 testando ancestral(221,617) = 0
+182 testando ancestral(293,669) = 0
+183 testando ancestral(613,141) = 0
+184 testando ancestral(727,152) = 0
+185 testando ancestral(116,63) = 0
+186 testando ancestral(212,58) = 0
+187 testando ancestral(39,352) = 0
+188 testando ancestral(380,61) = 0
+189 testando ancestral(350,354) = 0
+190 testando ancestral(477,727) = 0
+191 testando ancestral(375,242) = 0
+192 testando ancestral(202,694) = 0
+193 testando ancestral(56,713) = 0
+194 testando ancestral(0,676) = 1
+195 testando ancestral(505,458) = 0
+196 testando ancestral(636,195) = 0
+197 testando ancestral(163,63) = 0
+198 testando ancestral(74,60) = 0
+199 testando ancestral(550,698) = 0
+200 testando ancestral(235,558) = 0
+201 testando ancestral(194,371) = 0
+202 testando ancestral(299,726) = 0
+203 testando ancestral(22,580) = 0
+204 testando ancestral(545,541) = 0
+205 testando ancestral(483,444) = 0
+206 testando ancestral(707,681) = 0
+207 testando ancestral(388,187) = 0
+208 testando ancestral(326,280) = 0
+209 testando ancestral(682,350) = 0
+210 testando ancestral(707,9) = 0
+211 testando ancestral(212,428) = 0
+212 testando ancestral(550,245) = 0
+213 testando ancestral(522,713) = 0
+214 testando ancestral(385,317) = 0
+215 testando ancestral(652,487) = 0
+216 testando ancestral(13,204) = 0
+217 testando ancestral(708,398) = 0
+218 testando ancestral(171,5) = 0
+219 testando ancestral(129,278) = 0
+220 testando ancestral(358,89) = 0
+221 testando ancestral(13,604) = 0
+222 testando ancestral(680,579) = 0
+223 testando ancestral(620,308) = 0
+224 testando ancestral(279,602) = 0
+225 testando ancestral(200,480) = 0
+226 testando ancestral(548,5) = 0
+227 testando ancestral(293,380) = 0
+228 testando ancestral(295,86) = 0
+229 testando ancestral(623,274) = 0
+230 testando ancestral(725,584) = 0
+231 testando ancestral(459,600) = 0
+232 testando ancestral(125,266) = 0
+233 testando ancestral(575,584) = 0
+234 testando ancestral(231,640) = 0
+235 testando ancestral(468,91) = 0
+236 testando ancestral(178,670) = 0
+237 testando ancestral(714,53) = 0
+238 testando ancestral(46,643) = 0
+239 testando ancestral(150,292) = 0
+240 testando ancestral(412,725) = 0
+241 testando ancestral(170,204) = 0
+242 testando ancestral(678,101) = 0
+243 testando ancestral(134,474) = 0
+244 testando ancestral(503,353) = 0
+245 testando ancestral(532,668) = 0
+246 testando ancestral(712,267) = 0
+247 testando ancestral(284,643) = 0
+248 testando ancestral(706,582) = 0
+249 testando ancestral(68,69) = 0
+250 testando ancestral(189,183) = 0
+251 testando ancestral(449,253) = 0
+252 testando ancestral(641,595) = 0
+253 testando ancestral(478,354) = 0
+254 testando ancestral(209,2) = 0
+255 testando ancestral(704,452) = 0
+256 testando ancestral(118,16) = 0
+257 testando ancestral(87,31) = 0
+258 testando ancestral(367,433) = 0
+259 testando ancestral(74,267) = 0
+260 testando ancestral(704,76) = 0
+261 testando ancestral(317,146) = 0
+262 testando ancestral(557,560) = 0
+263 testando ancestral(483,706) = 0
+264 testando ancestral(56,315) = 0
+265 testando ancestral(294,471) = 0
+266 testando ancestral(715,130) = 0
+267 testando ancestral(223,84) = 0
+268 testando ancestral(644,544) = 0
+269 testando ancestral(47,152) = 0
+270 testando ancestral(360,281) = 0
+271 testando ancestral(710,523) = 0
+272 testando ancestral(337,433) = 0
+273 testando ancestral(699,27) = 0
+274 testando ancestral(516,2) = 0
+275 testando ancestral(633,51) = 0
+276 testando ancestral(681,147) = 0
+277 testando ancestral(334,674) = 0
+278 testando ancestral(117,239) = 0
+279 testando ancestral(707,396) = 0
+280 testando ancestral(195,119) = 0
+281 testando ancestral(121,329) = 0
+282 testando ancestral(70,202) = 0
+283 testando ancestral(722,172) = 0
+284 testando ancestral(679,505) = 0
+285 testando ancestral(642,185) = 0
+286 testando ancestral(377,705) = 0
+287 testando ancestral(566,130) = 0
+288 testando ancestral(458,191) = 0
+289 testando ancestral(526,592) = 0
+290 testando ancestral(130,74) = 0
+291 testando ancestral(508,648) = 0
+292 testando ancestral(714,89) = 0
+293 testando ancestral(719,725) = 0
+294 testando ancestral(574,119) = 0
+295 testando ancestral(238,461) = 0
+296 testando ancestral(348,294) = 0
+297 testando ancestral(495,478) = 0
+298 testando ancestral(100,279) = 0
+299 testando ancestral(458,231) = 0
+300 testando ancestral(89,532) = 0
+301 testando ancestral(241,539) = 0
+302 testando ancestral(637,565) = 0
+303 testando ancestral(351,557) = 0
+304 testando ancestral(284,551) = 0
+305 testando ancestral(707,362) = 0
+306 testando ancestral(119,672) = 0
+307 testando ancestral(366,547) = 0
+308 testando ancestral(360,304) = 0
+309 testando ancestral(441,393) = 0
+310 testando ancestral(266,304) = 0
+311 testando ancestral(512,9) = 0
+312 testando ancestral(113,452) = 0
+313 testando ancestral(314,84) = 0
+314 testando ancestral(562,10) = 0
+315 testando ancestral(492,395) = 0
+316 testando ancestral(408,513) = 0
+317 testando ancestral(666,66) = 0
+318 testando ancestral(594,571) = 0
+319 testando ancestral(626,90) = 0
+320 testando ancestral(65,291) = 0
+321 testando ancestral(91,426) = 0
+322 testando ancestral(52,93) = 0
+323 testando ancestral(250,325) = 0
+324 testando ancestral(548,580) = 0
+325 testando ancestral(715,15) = 0
+326 testando ancestral(518,202) = 0
+327 testando ancestral(627,8) = 0
+328 testando ancestral(143,320) = 0
+329 testando ancestral(430,666) = 0
+330 testando ancestral(610,169) = 0
+331 testando ancestral(272,398) = 1
+332 testando ancestral(406,87) = 0
+333 testando ancestral(37,577) = 0
+334 testando ancestral(165,503) = 0
+335 testando ancestral(103,235) = 0
+336 testando ancestral(445,364) = 0
+337 testando ancestral(138,499) = 0
+338 testando ancestral(562,2) = 0
+339 testando ancestral(521,386) = 0
+340 testando ancestral(602,60) = 0
+341 testando ancestral(467,184) = 0
+342 testando ancestral(200,165) = 0
+343 testando ancestral(709,591) = 0
+344 testando ancestral(678,42) = 0
+345 testando ancestral(411,231) = 0
+346 testando ancestral(172,705) = 0
+347 testando ancestral(177,520) = 0
+348 testando ancestral(462,672) = 0
+349 testando ancestral(612,188) = 0
+350 testando ancestral(95,349) = 0
+351 testando ancestral(473,656) = 0
+352 testando ancestral(67,689) = 0
+353 testando ancestral(683,489) = 0
+354 testando ancestral(357,726) = 0
+355 testando ancestral(303,584) = 0
+356 testando ancestral(661,427) = 0
+357 testando ancestral(412,104) = 0
+358 testando ancestral(354,607) = 0
+359 testando ancestral(726,485) = 0
+360 testando ancestral(614,160) = 0
+361 testando ancestral(327,625) = 0
+362 testando ancestral(46,70) = 0
+363 testando ancestral(614,76) = 0
+364 testando ancestral(364,235) = 0
+365 testando ancestral(134,444) = 0
+366 testando ancestral(669,208) = 0
+367 testando ancestral(689,291) = 0
+368 testando ancestral(326,367) = 0
+369 testando ancestral(134,257) = 0
+370 testando ancestral(679,128) = 0
+371 testando ancestral(228,299) = 0
+372 testando ancestral(261,273) = 0
+373 testando ancestral(52,209) = 0
+374 testando ancestral(269,635) = 0
+375 testando ancestral(566,514) = 0
+376 testando ancestral(651,424) = 0
+377 testando ancestral(240,477) = 0
+378 testando ancestral(69,192) = 0
+379 testando ancestral(124,218) = 0
+380 testando ancestral(562,469) = 0
+381 testando ancestral(1,724) = 0
+382 testando ancestral(630,556) = 0
+383 testando ancestral(587,367) = 0
+384 testando ancestral(10,423) = 0
+385 testando ancestral(195,476) = 0
+386 testando ancestral(47,119) = 0
+387 testando ancestral(99,365) = 0
+388 testando ancestral(727,196) = 0
+389 testando ancestral(88,373) = 0
+390 testando ancestral(720,68) = 0
+391 testando ancestral(167,491) = 0
+392 testando ancestral(268,484) = 0
+393 testando ancestral(114,36) = 0
+394 testando ancestral(549,168) = 0
+395 testando ancestral(13,129) = 0
+396 testando ancestral(150,586) = 0
+397 testando ancestral(250,415) = 0
+398 testando ancestral(272,549) = 0
+399 testando ancestral(418,646) = 0
+400 testando ancestral(380,413) = 0
+401 testando ancestral(682,505) = 0
+402 testando ancestral(147,245) = 0
+403 testando ancestral(562,454) = 0
+404 testando ancestral(679,517) = 0
+405 testando ancestral(199,255) = 0
+406 testando ancestral(207,598) = 0
+407 testando ancestral(191,526) = 0
+408 testando ancestral(304,324) = 0
+409 testando ancestral(712,52) = 0
+410 testando ancestral(325,264) = 0
+411 testando ancestral(467,591) = 0
+412 testando ancestral(234,357) = 0
+413 testando ancestral(18,511) = 0
+414 testando ancestral(583,542) = 0
+415 testando ancestral(317,155) = 0
+416 testando ancestral(119,570) = 0
+417 testando ancestral(701,525) = 0
+418 testando ancestral(731,542) = 0
+419 testando ancestral(428,570) = 0
+420 testando ancestral(153,462) = 0
+421 testando ancestral(366,727) = 0
+422 testando ancestral(300,167) = 0
+423 testando ancestral(692,211) = 0
+424 testando ancestral(110,220) = 0
+425 testando ancestral(390,687) = 0
+426 testando ancestral(37,627) = 0
+427 testando ancestral(44,608) = 0
+428 testando ancestral(419,58) = 0
+429 testando ancestral(704,112) = 0
+430 testando ancestral(57,296) = 0
+431 testando ancestral(84,582) = 0
+432 testando ancestral(384,177) = 0
+433 testando ancestral(632,166) = 0
+434 testando ancestral(289,257) = 0
+435 testando ancestral(633,645) = 0
+436 testando ancestral(600,63) = 0
+437 testando ancestral(51,329) = 0
+438 testando ancestral(625,615) = 0
+439 testando ancestral(625,65) = 0
+440 testando ancestral(268,211) = 0
+441 testando ancestral(142,320) = 0
+442 testando ancestral(306,482) = 0
+443 testando ancestral(510,438) = 0
+444 testando ancestral(200,379) = 0
+445 testando ancestral(508,654) = 0
+446 testando ancestral(497,321) = 0
+447 testando ancestral(714,324) = 0
+448 testando ancestral(107,66) = 0
+449 testando ancestral(13,169) = 0
+450 testando ancestral(671,182) = 0
+451 testando ancestral(460,88) = 0
+452 testando ancestral(392,8) = 0
+453 testando ancestral(733,368) = 0
+454 testando ancestral(109,240) = 0
+455 testando ancestral(18,425) = 0
+456 testando ancestral(163,181) = 0
+457 testando ancestral(314,523) = 0
+458 testando ancestral(356,372) = 0
+459 testando ancestral(435,324) = 0
+460 testando ancestral(473,458) = 0
+461 testando ancestral(633,552) = 0
+462 testando ancestral(96,114) = 0
+463 testando ancestral(679,166) = 0
+464 testando ancestral(364,9) = 0
+465 testando ancestral(539,72) = 0
+466 testando ancestral(536,114) = 0
+467 testando ancestral(403,582) = 0
+468 testando ancestral(219,538) = 0
+469 testando ancestral(383,613) = 0
+470 testando ancestral(411,374) = 0
+471 testando ancestral(35,379) = 0
+472 testando ancestral(381,184) = 0
+473 testando ancestral(399,613) = 0
+474 testando ancestral(390,465) = 0
+475 testando ancestral(41,457) = 0
+476 testando ancestral(377,312) = 0
+477 testando ancestral(666,513) = 0
+478 testando ancestral(678,267) = 0
+479 testando ancestral(599,348) = 0
+480 testando ancestral(468,229) = 0
+481 testando ancestral(543,411) = 0
+482 testando ancestral(117,668) = 0
+483 testando ancestral(232,732) = 0
+484 testando ancestral(311,492) = 0
+485 testando ancestral(158,695) = 0
+486 testando ancestral(116,546) = 0
+487 testando ancestral(556,60) = 0
+488 testando ancestral(705,651) = 0
+489 testando ancestral(89,582) = 0
+490 testando ancestral(724,426) = 0
+491 testando ancestral(695,344) = 0
+492 testando ancestral(146,646) = 0
+493 testando ancestral(453,8) = 0
+494 testando ancestral(735,732) = 0
+495 testando ancestral(454,431) = 0
+496 testando ancestral(174,18) = 0
+497 testando ancestral(491,205) = 0
+498 testando ancestral(714,206) = 0
+499 testando ancestral(21,604) = 0
+500 testando ancestral(167,565) = 0
+501 testando ancestral(82,206) = 0
+502 testando ancestral(709,298) = 0
+503 testando ancestral(57,13) = 0
+504 testando ancestral(721,626) = 0
+505 testando ancestral(460,237) = 0
+506 testando ancestral(253,513) = 0
+507 testando ancestral(183,135) = 0
+508 testando ancestral(22,432) = 0
+509 testando ancestral(732,729) = 0
+510 testando ancestral(422,13) = 0
+511 testando ancestral(17,114) = 0
+512 testando ancestral(248,479) = 0
+513 testando ancestral(691,426) = 0
+514 testando ancestral(15,554) = 0
+515 testando ancestral(63,309) = 0
+516 testando ancestral(437,79) = 0
+517 testando ancestral(301,86) = 0
+518 testando ancestral(361,647) = 0
+519 testando ancestral(382,250) = 0
+520 testando ancestral(447,298) = 0
+521 testando ancestral(512,85) = 0
+522 testando ancestral(521,565) = 0
+523 testando ancestral(316,611) = 0
+524 testando ancestral(36,711) = 0
+525 testando ancestral(690,455) = 0
+526 testando ancestral(443,86) = 0
+527 testando ancestral(678,659) = 0
+528 testando ancestral(300,681) = 0
+529 testando ancestral(439,547) = 0
+530 testando ancestral(580,460) = 0
+531 testando ancestral(62,379) = 0
+532 testando ancestral(680,175) = 0
+533 testando ancestral(186,486) = 0
+534 testando ancestral(228,394) = 0
+535 testando ancestral(549,64) = 0
+536 testando ancestral(619,98) = 0
+537 testando ancestral(479,643) = 0
+538 testando ancestral(280,197) = 0
+539 testando ancestral(736,725) = 0
+540 testando ancestral(260,261) = 1
+541 testando ancestral(169,552) = 0
+542 testando ancestral(378,469) = 0
+543 testando ancestral(179,617) = 0
+544 testando ancestral(148,151) = 1
+545 testando ancestral(429,337) = 0
+546 testando ancestral(149,41) = 0
+547 testando ancestral(159,614) = 0
+548 testando ancestral(4,524) = 0
+549 testando ancestral(55,666) = 0
+550 testando ancestral(44,197) = 0
+551 testando ancestral(602,469) = 0
+552 testando ancestral(57,410) = 0
+553 testando ancestral(492,543) = 0
+554 testando ancestral(68,585) = 0
+555 testando ancestral(633,425) = 0
+556 testando ancestral(449,443) = 0
+557 testando ancestral(263,188) = 0
+558 testando ancestral(475,220) = 0
+559 testando ancestral(516,276) = 0
+560 testando ancestral(643,685) = 0
+561 testando ancestral(710,630) = 0
+562 testando ancestral(266,360) = 0
+563 testando ancestral(495,717) = 0
+564 testando ancestral(221,240) = 0
+565 testando ancestral(0,533) = 1
+566 testando ancestral(322,17) = 0
+567 testando ancestral(407,40) = 0
+568 testando ancestral(61,43) = 0
+569 testando ancestral(124,428) = 0
+570 testando ancestral(228,85) = 0
+571 testando ancestral(660,298) = 0
+572 testando ancestral(171,438) = 0
+573 testando ancestral(464,498) = 0
+574 testando ancestral(671,140) = 0
+575 testando ancestral(655,417) = 0
+576 testando ancestral(666,479) = 0
+577 testando ancestral(429,495) = 0
+578 testando ancestral(420,714) = 0
+579 testando ancestral(402,134) = 0
+580 testando ancestral(90,429) = 0
+581 testando ancestral(604,512) = 0
+582 testando ancestral(488,636) = 0
+583 testando ancestral(369,7) = 0
+584 testando ancestral(714,491) = 0
+585 testando ancestral(647,484) = 0
+586 testando ancestral(105,279) = 0
+587 testando ancestral(237,596) = 0
+588 testando ancestral(520,188) = 0
+589 testando ancestral(99,631) = 0
+590 testando ancestral(139,380) = 0
+591 testando ancestral(203,192) = 0
+592 testando ancestral(217,117) = 0
+593 testando ancestral(493,16) = 0
+594 testando ancestral(179,630) = 0
+595 testando ancestral(553,425) = 0
+596 testando ancestral(180,614) = 0
+597 testando ancestral(24,124) = 0
+598 testando ancestral(674,33) = 0
+599 testando ancestral(53,536) = 0
+600 testando ancestral(545,100) = 0
+601 testando ancestral(68,88) = 0
+602 testando ancestral(265,705) = 0
+603 testando ancestral(208,34) = 0
+604 testando ancestral(431,358) = 0
+605 testando ancestral(731,45) = 0
+606 testando ancestral(685,464) = 0
+607 testando ancestral(422,386) = 0
+608 testando ancestral(411,141) = 0
+609 testando ancestral(646,205) = 0
+610 testando ancestral(103,319) = 0
+611 testando ancestral(318,201) = 0
+612 testando ancestral(299,482) = 0
+613 testando ancestral(333,49) = 0
+614 testando ancestral(176,450) = 0
+615 testando ancestral(197,371) = 0
+616 testando ancestral(625,662) = 1
+617 testando ancestral(459,664) = 0
+618 testando ancestral(724,327) = 0
+619 testando ancestral(151,608) = 0
+620 testando ancestral(473,424) = 0
+621 testando ancestral(316,69) = 0
+622 testando ancestral(359,604) = 0
+623 testando ancestral(718,634) = 0
+624 testando ancestral(723,152) = 0
+625 testando ancestral(197,425) = 0
+626 testando ancestral(343,672) = 0
+627 testando ancestral(281,707) = 0
+628 testando ancestral(172,672) = 0
+629 testando ancestral(648,687) = 0
+630 testando ancestral(320,11) = 0
+631 testando ancestral(415,195) = 0
+632 testando ancestral(222,230) = 0
+633 testando ancestral(698,336) = 0
+634 testando ancestral(735,215) = 0
+635 testando ancestral(301,380) = 0
+636 testando ancestral(503,415) = 0
+637 testando ancestral(136,657) = 0
+638 testando ancestral(501,282) = 0
+639 testando ancestral(582,538) = 0
+640 testando ancestral(507,562) = 0
+641 testando ancestral(548,316) = 0
+642 testando ancestral(224,242) = 1
+643 testando ancestral(712,275) = 0
+644 testando ancestral(53,35) = 0
+645 testando ancestral(252,520) = 0
+646 testando ancestral(291,185) = 0
+647 testando ancestral(298,498) = 0
+648 testando ancestral(582,566) = 0
+649 testando ancestral(26,637) = 0
+650 testando ancestral(479,435) = 0
+651 testando ancestral(345,401) = 0
+652 testando ancestral(380,42) = 0
+653 testando ancestral(522,84) = 0
+654 testando ancestral(44,334) = 0
+655 testando ancestral(692,650) = 0
+656 testando ancestral(721,709) = 0
+657 testando ancestral(302,691) = 0
+658 testando ancestral(667,614) = 0
+659 testando ancestral(39,170) = 0
+660 testando ancestral(161,40) = 0
+661 testando ancestral(295,550) = 0
+662 testando ancestral(334,12) = 0
+663 testando ancestral(618,228) = 0
+664 testando ancestral(271,81) = 0
+665 testando ancestral(282,592) = 0
+666 testando ancestral(625,366) = 0
+667 testando ancestral(611,336) = 0
+668 testando ancestral(433,8) = 0
+669 testando ancestral(510,163) = 0
+670 testando ancestral(311,78) = 0
+671 testando ancestral(621,717) = 0
+672 testando ancestral(331,355) = 0
+673 testando ancestral(281,109) = 0
+674 testando ancestral(238,649) = 0
+675 testando ancestral(321,42) = 0
+676 testando ancestral(63,499) = 0
+677 testando ancestral(14,434) = 0
+678 testando ancestral(120,282) = 0
+679 testando ancestral(573,258) = 0
+680 testando ancestral(112,665) = 0
+681 testando ancestral(532,649) = 0
+682 testando ancestral(111,594) = 0
+683 testando ancestral(129,118) = 0
+684 testando ancestral(572,707) = 0
+685 testando ancestral(306,392) = 0
+686 testando ancestral(17,170) = 0
+687 testando ancestral(132,735) = 0
+688 testando ancestral(305,510) = 0
+689 testando ancestral(399,730) = 0
+690 testando ancestral(658,596) = 0
+691 testando ancestral(202,335) = 0
+692 testando ancestral(550,229) = 0
+693 testando ancestral(374,692) = 0
+694 testando ancestral(62,363) = 0
+695 testando ancestral(283,270) = 0
+696 testando ancestral(416,11) = 0
+697 testando ancestral(688,612) = 0
+698 testando ancestral(641,122) = 0
+699 testando ancestral(40,619) = 0
+700 testando ancestral(621,153) = 0
+701 testando ancestral(293,576) = 0
+702 testando ancestral(19,497) = 0
+703 testando ancestral(19,6) = 0
+704 testando ancestral(68,255) = 0
+705 testando ancestral(534,259) = 0
+706 testando ancestral(45,230) = 0
+707 testando ancestral(23,221) = 0
+708 testando ancestral(309,78) = 0
+709 testando ancestral(19,300) = 0
+710 testando ancestral(15,569) = 0
+711 testando ancestral(62,457) = 0
+712 testando ancestral(451,41) = 0
+713 testando ancestral(477,49) = 0
+714 testando ancestral(555,321) = 0
+715 testando ancestral(189,41) = 0
+716 testando ancestral(32,352) = 0
+717 testando ancestral(651,488) = 0
+718 testando ancestral(494,113) = 0
+719 testando ancestral(649,482) = 0
+720 testando ancestral(70,266) = 0
+721 testando ancestral(630,550) = 0
+722 testando ancestral(51,234) = 0
+723 testando ancestral(303,267) = 0
+724 testando ancestral(249,578) = 0
+725 testando ancestral(112,355) = 0
+726 testando ancestral(176,125) = 0
+727 testando ancestral(533,321) = 0
+728 testando ancestral(510,86) = 0
+729 testando ancestral(20,87) = 0
+730 testando ancestral(572,514) = 0
+731 testando ancestral(329,371) = 0
+732 testando ancestral(300,381) = 0
+733 testando ancestral(463,625) = 0
+734 testando ancestral(491,319) = 0
+735 testando ancestral(42,736) = 0
+736 testando ancestral(509,133) = 0

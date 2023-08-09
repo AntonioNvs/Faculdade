@@ -1,0 +1,50 @@
+--------------------------------------------------------------------------------
+I1 cache:         32768 B, 64 B, 8-way associative
+D1 cache:         32768 B, 64 B, 8-way associative
+LL cache:         8388608 B, 64 B, 16-way associative
+Command:          bin/main -o output.txt -s 10 -n 1000
+Data file:        cachegrind.out.30835
+Events recorded:  Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw
+Events shown:     Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw
+Event sort order: Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw
+Thresholds:       0.1 100 100 100 100 100 100 100 100
+Include dirs:     
+User annotated:   
+Auto-annotation:  off
+
+--------------------------------------------------------------------------------
+Ir         I1mr  ILmr  Dr        D1mr  DLmr  Dw      D1mw  DLmw  
+--------------------------------------------------------------------------------
+21,192,982 1,360 1,328 9,079,900 3,196 2,260 525,501 1,295 1,153  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir         I1mr ILmr Dr        D1mr  DLmr Dw      D1mw DLmw  file:function
+--------------------------------------------------------------------------------
+17,400,201    3    3 8,155,635     4    0   5,896    0    0  /home/antonio/Desktop/Faculdade/SEMESTRES/3/ED/Ativ5/src/main.c:ancestral
+   965,961   48   48   258,128    15    5 163,578    7    0  /build/glibc-SzIz7B/glibc-2.31/stdio-common/vfprintf-internal.c:__vfprintf_internal
+   791,626    6    6   163,709     2    0 131,232   11    0  /build/glibc-SzIz7B/glibc-2.31/libio/fileops.c:_IO_file_xsputn@@GLIBC_2.2.5
+   326,904    5    5   104,856     0    0  49,344    0    0  /build/glibc-SzIz7B/glibc-2.31/libio/iofwrite.c:fwrite
+   215,810    3    3    43,902     1    1  28,059  109   63  /build/glibc-SzIz7B/glibc-2.31/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:__memcpy_avx_unaligned_erms
+   193,764    3    3    14,472     2    1  10,050    0    0  /build/glibc-SzIz7B/glibc-2.31/stdio-common/_itoa.c:_itoa_word
+   123,816    4    4    11,792     1    0       0    0    0  /build/glibc-SzIz7B/glibc-2.31/string/../sysdeps/x86_64/multiarch/strchr-avx2.S:__strchrnul_avx2
+   112,819    2    2    48,532   111    0  15,016    0    0  /home/antonio/Desktop/Faculdade/SEMESTRES/3/ED/Ativ5/src/main.c:dumpTree
+   111,024    0    0    30,840     0    0   6,168    0    0  /build/glibc-SzIz7B/glibc-2.31/libio/libioP.h:fwrite
+   104,320   21   21    17,755     2    0  17,759  376  371  /build/glibc-SzIz7B/glibc-2.31/malloc/malloc.c:_int_malloc
+    71,545   10   10    14,316 1,084  882      15    1    0  /build/glibc-SzIz7B/glibc-2.31/elf/dl-addr.c:_dl_addr
+    68,603    3    3    15,491     2    1   8,852    0    0  /build/glibc-SzIz7B/glibc-2.31/stdlib/erand48_r.c:erand48_r
+    64,984   43   34    32,453    23    0      19    1    1  ???:???
+    63,372    1    1         0     0    0       0    0    0  /build/glibc-SzIz7B/glibc-2.31/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:__mempcpy_avx_unaligned_erms
+    54,154    7    7    24,313     1    1   8,843    1    0  /home/antonio/Desktop/Faculdade/SEMESTRES/3/ED/Ativ5/src/main.c:createTree
+    50,116    3    3    17,688     0    0   2,948    0    0  /build/glibc-SzIz7B/glibc-2.31/stdio-common/../libio/libioP.h:__vfprintf_internal
+    42,047    2    2    15,491     2    0   4,426    0    0  /build/glibc-SzIz7B/glibc-2.31/stdlib/drand48-iter.c:__drand48_iterate
+    41,272    3    3     1,474     0    0  16,951    1    0  /build/glibc-SzIz7B/glibc-2.31/stdio-common/printf-parse.h:__vfprintf_internal
+    36,850    4    4     5,896     0    0  14,740    0    0  /build/glibc-SzIz7B/glibc-2.31/stdio-common/fprintf.c:fprintf
+    35,434    6    6     8,861     1    0   2,955    0    0  /build/glibc-SzIz7B/glibc-2.31/malloc/malloc.c:malloc
+    33,195    2    2    11,065     1    0   4,426    0    0  /build/glibc-SzIz7B/glibc-2.31/stdlib/drand48.c:drand48
+    32,635   15   15    10,955   270  189   4,835   12    3  /build/glibc-SzIz7B/glibc-2.31/elf/dl-lookup.c:do_lookup_x
+    31,020    7    7    11,808     1    0   5,914    2    1  /home/antonio/Desktop/Faculdade/SEMESTRES/3/ED/Ativ5/src/main.c:main
+    28,992    5    5     5,629    44   44      89    2    2  /build/glibc-SzIz7B/glibc-2.31/elf/dl-tunables.c:__GI___tunables_init
+    27,279    2    2     9,584   108    0   5,898   46   46  /home/antonio/Desktop/Faculdade/SEMESTRES/3/ED/Ativ5/src/main.c:build_posordem
+    27,279    1    1     9,584     0    0   5,898   47   47  /home/antonio/Desktop/Faculdade/SEMESTRES/3/ED/Ativ5/src/main.c:build_preordem
+    24,655   10   10     4,895   109   98   2,458   12    2  /build/glibc-SzIz7B/glibc-2.31/elf/dl-lookup.c:_dl_lookup_symbol_x
+
