@@ -14,7 +14,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <errno.h>
-
 #include "memlog.h"
 #include "msgassert.h"
 
